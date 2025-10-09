@@ -1,0 +1,53 @@
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Animated Bacteria Background -->
+        <div class="bacteria-background" id="bacteria-container">
+            <!-- Bacteria videos will be dynamically added here -->
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-container">
+            <div class="image-row" style="height: 60vh;">
+                 <img src="img/Generated_Image_September_24__2025_-_3_15PM-removebg-preview.png" alt="">
+                 <div>
+                <nav class="hero-nav">
+                    <a href="#pricing" class="nav-item">Our Story</a>
+                    <a href="#story" class="nav-item">Process</a>
+                    <a href="#ingredients" class="nav-item">Ingredients</a>
+                </nav>
+            </div>
+                
+            </div>
+            <!-- <div class="nav-row">
+                <nav class="hero-nav">
+                    <a href="#pricing" class="nav-item">Pricing</a>
+                    <a href="#story" class="nav-item">Our Story</a>
+                    <a href="#ingredients" class="nav-item">Ingredients</a>
+                </nav>
+            </div> -->
+        </div>
+    </section>
+
+
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="price-box">
+                    <h3>Single Purchase</h3>
+                    <div class="price">$12.99</div>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+                    <button class="cta-button">Buy Once</button>
+                </div>
+                <div class="price-box featured">
+                    <h3>Subscription</h3>
+                    <div class="price">$9.99</div>
+                    <p><span>/month</span></p>
+                    <button class="cta-button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
