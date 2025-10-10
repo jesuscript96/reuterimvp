@@ -442,14 +442,16 @@ class ParallaxEffect {
             const rect = image.getBoundingClientRect();
             const windowHeight = window.innerHeight;
 
-            // Only apply parallax if image is in viewport
+            // Only apply parallax if image is in viewport or near it
             if (rect.top < windowHeight && rect.bottom > 0) {
-                // Calculate parallax offset
-                const scrolled = window.pageYOffset;
-                const imageTop = image.offsetTop;
-                const speed = 0.5; // Parallax speed (lower = slower)
+                // Calculate parallax based on element position in viewport
+                // When element is centered in viewport, offset should be 0
+                const imageCenter = rect.top + rect.height / 2;
+                const viewportCenter = windowHeight / 2;
+                const distanceFromCenter = imageCenter - viewportCenter;
 
-                const yPos = -(scrolled - imageTop) * speed;
+                const speed = 0.3; // Parallax speed (lower = slower, more subtle)
+                const yPos = distanceFromCenter * speed;
 
                 // Apply the parallax effect
                 image.style.backgroundPosition = `center calc(50% + ${yPos}px)`;
