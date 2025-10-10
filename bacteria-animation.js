@@ -411,3 +411,54 @@ if (document.readyState === 'loading') {
 } else {
     preloadVideos();
 }
+
+// Parallax Effect for Section Images
+class ParallaxEffect {
+    constructor() {
+        this.images = document.querySelectorAll('.image-placeholder');
+        this.ticking = false;
+        this.init();
+    }
+
+    init() {
+        if (this.images.length === 0) return;
+
+        window.addEventListener('scroll', () => {
+            if (!this.ticking) {
+                window.requestAnimationFrame(() => {
+                    this.updateParallax();
+                    this.ticking = false;
+                });
+                this.ticking = true;
+            }
+        });
+
+        // Initial update
+        this.updateParallax();
+    }
+
+    updateParallax() {
+        this.images.forEach(image => {
+            const rect = image.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Only apply parallax if image is in viewport
+            if (rect.top < windowHeight && rect.bottom > 0) {
+                // Calculate parallax offset
+                const scrolled = window.pageYOffset;
+                const imageTop = image.offsetTop;
+                const speed = 0.5; // Parallax speed (lower = slower)
+
+                const yPos = -(scrolled - imageTop) * speed;
+
+                // Apply the parallax effect
+                image.style.backgroundPosition = `center calc(50% + ${yPos}px)`;
+            }
+        });
+    }
+}
+
+// Initialize parallax when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    new ParallaxEffect();
+});
