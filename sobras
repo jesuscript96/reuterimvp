@@ -30,24 +30,43 @@
 
 
 
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2>Choose Your Plan</h2>
-            <div class="pricing-grid">
-                <div class="price-box">
-                    <h3>Single Purchase</h3>
-                    <div class="price">$12.99</div>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-                    <button class="cta-button">Buy Once</button>
-                </div>
-                <div class="price-box featured">
-                    <h3>Subscription</h3>
-                    <div class="price">$9.99</div>
-                    <p><span>/month</span></p>
-                    <button class="cta-button">Subscribe</button>
-                </div>
+   <!-- Testimonials Section -->
+   <section class="testimonials">
+    <div class="container">
+        <h2>What People Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-item">
+                <div class="person-photo"></div>
+                <p>"Amazing taste and texture!"</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="person-photo"></div>
+                <p>"Best plant-based yogurt ever"</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="person-photo"></div>
+                <p>"Love the probiotic benefits"</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="person-photo"></div>
+                <p>"Creamy and delicious"</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="person-photo"></div>
+                <p>"Perfect for my diet"</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="person-photo"></div>
+                <p>"Great for breakfast"</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="person-photo"></div>
+                <p>"Highly recommend!"</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="person-photo"></div>
+                <p>"Fantastic quality"</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>

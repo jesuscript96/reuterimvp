@@ -47,185 +47,11 @@ body {
     padding: 0 20px;
 }
 
-/* Hero Section - Mobile First */
-.hero {
-    min-height: 100vh;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Bacteria Background */
-.bacteria-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-}
-
-.bacteria-video {
-    position: absolute;
-    filter: blur(0.5px);
-    border-radius: 50%;
-    transform-origin: center;
-    will-change: transform;
-    z-index: 0;
-    object-fit: cover;
-}
-
-/* Floating animations */
-@keyframes float1 {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
-}
-
-@keyframes float2 {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    33% { transform: translateY(-15px) rotate(120deg); }
-    66% { transform: translateY(-25px) rotate(240deg); }
-}
-
-@keyframes float3 {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(90deg); }
-    75% { transform: translateY(-30px) rotate(270deg); }
-}
-
-@keyframes drift {
-    0% { transform: translateX(0px); }
-    50% { transform: translateX(10px); }
-    100% { transform: translateX(0px); }
-}
-
-/* Hero content with higher z-index */
-.hero-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    position: relative;
-    z-index: 1;
-}
-
-/* Fila superior - 60% de altura (móvil) */
-.image-row {
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(232, 245, 232, 0.3);
-    padding: 20px;
-}
-
-/* Fila inferior - 40% de altura (móvil) */
-.nav-row {
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(232, 245, 232, 0.3);
-}
-
-.yogurt-placeholder {
-    width: 180px;
-    height: 180px;
-    background-color: #ff6b6b;
-    border-radius: 50%;
-    max-width: 90%;
-}
-
-.hero-nav {
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.nav-item {
-    background-color: #9c6d41;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.nav-item:hover {
-    background-color: #708238;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
-.nav-item:active {
-    transform: translateY(0);
-}
-
-/* Pricing Section - Mobile First */
-.pricing {
-    background-color: #9c6d41;
-    padding: 3rem 0;
-}
-
-.pricing h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    color: white;
-    padding: 0 20px;
-}
-
-.pricing-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.price-box {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.price-box.featured {
-    background-color: #708238;
-    color: white;
-    transform: scale(1);
-}
-
-.price {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 1rem 0;
-    color: #ff6b6b;
-}
-
-.featured .price {
-    color: white;
-}
-
-.price span {
-    font-size: 1rem;
-}
 
 /* Content Sections - Mobile First */
 .content-section {
     min-height: auto;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .content-section:nth-child(odd) {
@@ -252,27 +78,27 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll; /* Scroll en móvil, JS manejará el parallax */
+    background-attachment: fixed; /* Efecto parallax */
 }
 
 /* Specific section images */
 .story-image {
-    background-image: url("img/yogur con fruta.png");
+    background-image: url("img/Testimonial3.png");
     background-color: #ffb74d;
 }
 
 .process-image {
-    background-image: url("img/bañomaria.png");
+    background-image: url("img/baño-maria-far.png");
     background-color: #81c784;
 }
 
 .ingredients-image {
-    background-image: url("img/mixinyogurt.png");
+    background-image: url("img/Testimonial2.png");
     background-color: #e1bee7;
 }
 
 .research-image {
-    background-image: url("img/research.png");
+    background-image: url("img/research2.png");
     background-color: #b3e5fc;
 }
 
@@ -378,6 +204,110 @@ body {
     color: #708238;
 }
 
+/* Pricing Section */
+.pricing {
+    background-color: #f8f9fa;
+    padding: 4rem 20px;
+}
+
+.pricing h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.pricing-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.price-box {
+    background-color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.price-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.price-box.featured {
+    background-color: #708238;
+    color: white;
+    border: 2px solid #708238;
+    position: relative;
+}
+
+.price-box.featured::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #9c6d41;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.price-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    color: #9c6d41;
+}
+
+.featured .price {
+    color: white;
+}
+
+.price-box p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.featured p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.price-box p span {
+    font-size: 1.2rem;
+    color: inherit;
+}
+
+.price-box .cta-button {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.featured .cta-button {
+    background-color: #9c6d41;
+}
+
+.featured .cta-button:hover {
+    background-color: #7d5533;
+}
+
 /* CTA Section */
 .cta-section {
     background-color: #708238;
@@ -427,7 +357,7 @@ body {
 }
 
 .instagram-link {
-    color: #9c6d41;
+    color: #f9dfc7;
     text-decoration: none;
     font-weight: 600;
 }
@@ -544,41 +474,16 @@ body {
         right: 20px;
     }
 
-    /* Hero adjustments for tablet */
-    .yogurt-placeholder {
-        width: 250px;
-        height: 250px;
-    }
-
-    .nav-item {
-        padding: 15px 20px;
-        font-size: 15px;
-    }
-
-    /* Pricing grid for tablet */
-    .pricing h2 {
-        font-size: 2rem;
-    }
-
-    .pricing-grid {
-        flex-direction: row;
-        gap: 2rem;
-        justify-content: center;
-    }
-
-    .price-box {
-        flex: 1;
-        max-width: 300px;
-    }
-
-    .price {
-        font-size: 2.5rem;
-    }
-
     /* Content sections for tablet */
+    .content-section {
+        overflow: hidden;
+    }
+
     .content-grid {
         flex-direction: row;
         align-items: stretch;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
     }
 
     .content-section.alt .content-grid {
@@ -586,16 +491,16 @@ body {
     }
 
     .image-placeholder {
-        width: 50%;
+        width: 50vw;
         height: auto;
         margin-left: 0;
         min-height: 400px;
-        background-attachment: fixed; /* Parallax CSS en tablet/desktop */
+        background-attachment: fixed;
     }
 
     .content {
-        width: 50%;
-        max-width: 50%;
+        width: 50vw;
+        max-width: 600px;
         padding: 3rem 2rem;
     }
 
@@ -620,6 +525,25 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
+
+    /* Pricing grid for tablet */
+    .pricing-grid {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .price-box {
+        flex: 1;
+        max-width: 450px;
+    }
+
+    .price-box.featured {
+        transform: scale(1.05);
+    }
+
+    .price-box.featured:hover {
+        transform: scale(1.08) translateY(-5px);
+    }
 }
 
 /* Desktop Styles */
@@ -636,60 +560,16 @@ body {
         right: 30px;
     }
 
-    /* Hero para desktop: cambiar a estructura horizontal */
-    .hero-container {
-        flex-direction: row;
-        height: 100%;
-    }
-
-    .image-row {
-        width: 70%;
-        height: 100%;
-    }
-
-    .nav-row {
-        width: 30%;
-        height: 100%;
-        padding: 40px 20px;
-    }
-
-    .hero-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: none;
-    }
-
-    .nav-item {
-        padding: 16px 24px;
-        font-size: 16px;
-        font-weight: 500;
-    }
-
-    .yogurt-placeholder {
-        width: 350px;
-        height: 350px;
-    }
-
-    /* Pricing improvements for desktop */
-    .pricing h2 {
-        font-size: 2.5rem;
-    }
-
-    .price-box.featured {
-        transform: scale(1.05);
-    }
-
     /* Content sections for desktop */
     .image-placeholder {
-        width: 50%;
-        min-height: 500px;
+        width: 50vw;
+        min-height: 600px;
     }
 
     .content {
-        width: 50%;
-        max-width: 50%;
-        padding: 4rem 3rem;
+        width: 50vw;
+        max-width: 700px;
+        padding: 4rem 4rem;
     }
 
     .content h2 {
@@ -733,15 +613,27 @@ body {
         padding: 2.5rem;
         min-height: 250px;
     }
+
+    /* Pricing improvements for desktop */
+    .pricing h2 {
+        font-size: 2.5rem;
+    }
+
+    .pricing-grid {
+        gap: 3rem;
+    }
+
+    .price-box {
+        padding: 3rem 2.5rem;
+    }
+
+    .price {
+        font-size: 3.5rem;
+    }
 }
 
 /* Large Desktop */
 @media (min-width: 1200px) {
-    .yogurt-placeholder {
-        width: 400px;
-        height: 400px;
-    }
-
     .image-placeholder {
         min-height: 550px;
     }
@@ -774,5 +666,44 @@ body {
 
     .testimonials h2 {
         font-size: 1.5rem;
+    }
+
+    .pricing h2 {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .price-box {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    max-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    overflow: hidden;
+}
+
+.hero-image {
+    max-width: 110%;
+    height: auto;
+    display: block;
+}
+
+/* Tablet and Desktop - reduce image size */
+@media (min-width: 768px) {
+    .hero-image {
+        max-width: 100%;
+        max-height: 90vh;
+        object-fit: contain;
     }
 }
