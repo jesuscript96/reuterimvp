@@ -682,6 +682,40 @@ body {
     font-size: 0.9rem;
 }
 
+.instagram-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.instagram-text {
+    font-size: 1.1rem;
+    color: #5d6d7e;
+    margin-bottom: 1rem;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #d75527;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.instagram-link:hover {
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+.instagram-icon {
+    width: 32px;
+    height: 32px;
+}
+
 @media (min-width: 768px) {
     .community-header h2 {
         font-size: 2.5rem;
