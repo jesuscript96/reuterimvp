@@ -306,98 +306,113 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .price-box {
-    background-color: white;
-    padding: 2.5rem 2rem;
+    background-color: #f3d8af;
+    padding: 0;
     border-radius: 4px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 3px solid #e0e0e0;
+    overflow: hidden;
+    position: relative;
 }
 
 .price-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-color: #d75527;
+    box-shadow: 0 4px 20px rgba(215, 85, 39, 0.2);
 }
 
 .price-box.featured {
-    background-color: #d75527;
-    color: white;
-    border: 2px solid #d75527;
-    position: relative;
+    border: 3px solid #d75527;
+    box-shadow: 0 4px 20px rgba(215, 85, 39, 0.15);
 }
 
 .price-box.featured::before {
     content: 'GET 21% DISCOUNT';
     position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    right: 0;
     background-color: #000000;
     color: white;
-    padding: 5px 20px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    padding: 8px 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    transform: rotate(0deg);
 }
 
 .price-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: inherit;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 2rem 2rem 1rem 2rem;
+    color: #000000;
+    font-weight: 700;
+    background-color: #f8f8f8;
+}
+
+.featured h3 {
+    background-color: #d75527;
+    color: white;
 }
 
 .price {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 1.5rem 0;
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 1rem 2rem 0.5rem 2rem;
     color: #000000;
+    line-height: 1;
 }
 
 .featured .price {
-    color: white;
+    color: #d75527;
 }
 
 .price-box p {
     color: #666;
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
+    margin: 0;
+    padding: 0 2rem 2rem 2rem;
+    font-size: 1rem;
 }
 
 .featured p {
-    color: rgba(255, 255, 255, 0.9);
+    color: #333;
 }
 
 .price-box p span {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: inherit;
+    font-weight: 500;
 }
 
 .price-box .cta-button {
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
+    width: calc(100% - 4rem);
+    margin: 0 2rem 2rem 2rem;
     background-color: #d75527;
-    color: #000000;
+    color: white;
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
 }
 
 .price-box .cta-button:hover {
-    background-color: #c04517;
+    background-color: #000000;
+    transform: translateY(0);
 }
 
 .featured .cta-button {
-    background-color: black;
+    background-color: #000000;
     color: white;
 }
 
 .featured .cta-button:hover {
-    background-color: black;
+    background-color: #d75527;
 }
 
 /* CTA Section */
@@ -1054,4 +1069,8 @@ details[open] .accordion-icon {
     .accordion-content {
         padding: 0 2.5rem 2.5rem 2.5rem;
     }
+}
+
+.gap {
+    gap: 10rem;
 }
