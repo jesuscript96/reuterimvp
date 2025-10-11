@@ -933,6 +933,28 @@ body {
     .price {
         font-size: 3.5rem;
     }
+
+    .discount-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .promo-image {
+        max-width: 50%;
+        margin-bottom: 0;
+    }
+
+    .discount-text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .discount-form .cta-button {
+        margin-bottom: 0;
+    }
 }
 
 /* Large Desktop */
@@ -1270,4 +1292,55 @@ details[open] .accordion-icon {
 
 .gap {
     gap: 10rem;
+}
+
+/* Discount Section */
+#discount {
+    padding: 4rem 20px;
+    text-align: center;
+}
+
+.discount-content h2 {
+    font-size: 2rem;
+    color: #d75527;
+    margin-bottom: 1rem;
+}
+
+.discount-content p {
+    font-size: 1.1rem;
+    color: #5d6d7e;
+    margin-bottom: 2rem;
+}
+
+.discount-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.discount-form input {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+
+    .discount-form {
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    .discount-form input {
+        min-width: 80% !important;
+        flex: 1;
+        
+    }
+}
+.promo-image {
+    width: 100%;
+    margin-bottom: 1rem;
 }
