@@ -1,56 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reuteri - Plant-Based Yogurt</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Fixed Subscribe Button -->
     <button class="fixed-subscribe">Subscribe</button>
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="img/yogur-props.png" alt="Yogurt de Coco" class="hero-image">
-    </section>
-
-    <!-- Our Story Section -->
-    <section id="story" class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <!-- <div class="image-placeholder story-image"></div> -->
-                <div class="content">
-                    <h2>Our Story</h2>
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                </div>
-            </div>
-        </div>
+        <img src="img/yogurt benefits edit.webp" alt="Yogurt de Coco" class="hero-image">
     </section>
 
     <!-- Ingredients Section -->
     <section id="ingredients" class="content-section alt">
         <div class="container">
-            <div class="content-grid">
-                <div class="image-placeholder ingredients-image"></div>
+            <!-- <div class="content-grid"> -->
                 <div class="content">
                     <h2>Ingredients</h2>
                     <ul class="ingredients-list">
-                        <li>Organic coconut milk</li>
-                        <li>Live probiotic cultures</li>
-                        <li>Natural vanilla extract</li>
-                        <li>Organic cane sugar</li>
-                        <li>Stabilizing agents</li>
-                        <li>Natural flavoring</li>
+                        <li>Coconut</li>
+                        <li>Water</li>
+                        <li>Inulin (preobiotic)</li>
+                        <li>L. Reuteri live culture</li>
                     </ul>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
     </section>
+
+
+
 
     <!-- Process Section -->
     <section class="content-section">
@@ -61,55 +50,142 @@
                     <h2>Our Process</h2>
                     <div class="process-steps">
                         <div class="process-step">
-                            <span class="step-number">1</span>
-                            <p>Select premium ingredients</p>
+                            <span class="step-number">⚪️</span>
+                            <p>48-hour slow fermentation</p>
                         </div>
                         <div class="process-step">
-                            <span class="step-number">2</span>
-                            <p>Ferment for 48 hours</p>
+                            <span class="step-number">⚪️</span>
+                            <p>95° controlled temperature</p>
                         </div>
-                        <div class="process-step">
+                        <!-- <div class="process-step">
                             <span class="step-number">3</span>
                             <p>Quality control testing</p>
                         </div>
                         <div class="process-step">
                             <span class="step-number">4</span>
                             <p>Package and deliver fresh</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Layout Section -->
+    <!-- Accordions Section -->
     <section class="content-section alt">
         <div class="container">
             <div class="content-grid">
                 <div class="image-placeholder research-image"></div>
                 <div class="content">
-                    <h2>Research & Resources</h2>
-                    <ul class="links-list">
-                        <li><a href="#">Scientific studies on probiotics</a></li>
-                        <li><a href="#">Plant-based nutrition guide</a></li>
-                        <li><a href="#">Fermentation process research</a></li>
-                        <li><a href="#">Health benefits documentation</a></li>
-                        <li><a href="#">Sustainability reports</a></li>
-                    </ul>
+                    <h2>Research and resources</h2>
+                    <div class="accordion-container">
+                <!-- Scientific Studies Accordion -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span class="accordion-title">Scientific Studies</span>
+                        <span class="accordion-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="accordion-content">
+                        <ul class="studies-list">
+                            <li>
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10028957/" target="_blank" rel="noopener noreferrer">
+                                    Microbial stimulation of oxytocin release from the intestinal epithelium via secretin signaling
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0074774216301180" target="_blank" rel="noopener noreferrer">
+                                    Lactobacillus reuteri: Advances in Applied Microbiology
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tandfonline.com/doi/full/10.1080/19490976.2025.2451088" target="_blank" rel="noopener noreferrer">
+                                    Gut Microbiome and Probiotic Research
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.researchgate.net/publication/287972979_Effect_of_Daily_Consumption_of_Lactobacil-lus_reuteri_CRL_1098_on_Cholesterol_Reduction_in_Hypercholesterolemic_Subjects" target="_blank" rel="noopener noreferrer">
+                                    Effect of Daily Consumption of Lactobacillus reuteri CRL 1098 on Cholesterol Reduction in Hypercholesterolemic Subjects
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Recipes Accordion -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span class="accordion-title">Recipes</span>
+                        <span class="accordion-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="recipes-list">
+                            <div class="recipe-card">
+                                <h4>🥣 Morning Culture Bowl</h4>
+                                <p class="recipe-ingredients"><strong>Ingredients:</strong> Coconut yogurt, chia seeds, papaya, flaxseed, raw honey, sea salt.</p>
+                                <p class="recipe-benefits">→ Probiotic + Omega-3 + Digestive Enzymes</p>
+                            </div>
+
+                            <div class="recipe-card">
+                                <h4>🌿 Green Ferment Pesto</h4>
+                                <p class="recipe-ingredients"><strong>Ingredients:</strong> Coconut yogurt, fresh basil, lemon juice, olive oil, garlic, nutritional yeast.</p>
+                                <p class="recipe-benefits">→ Anti-Inflammatory + Detoxifying + Chlorophyll-Rich</p>
+                            </div>
+
+                            <div class="recipe-card">
+                                <h4>🍶 Umami Culture Sauce</h4>
+                                <p class="recipe-ingredients"><strong>Ingredients:</strong> Coconut yogurt, white miso, sesame oil, rice vinegar, ginger.</p>
+                                <p class="recipe-benefits">→ Double Fermented + Mineral-Rich + Deep Umami</p>
+                            </div>
+
+                            <div class="recipe-card">
+                                <h4>🍯 Date Caramel Yogurt</h4>
+                                <p class="recipe-ingredients"><strong>Ingredients:</strong> Coconut yogurt, Medjool dates, vanilla, sea salt.</p>
+                                <p class="recipe-benefits">→ Prebiotic + Naturally Sweet + Gut-Nourishing</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-       <!-- Pricing Section -->
-       <section id="pricing" class="pricing">
+    <!-- Our Story Section -->
+    <section id="story" class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="image-placeholder story-image"></div>
+                <div class="content">
+                    <h2>About Us</h2>
+                    <!-- <h3>Lorem ipsum dolor sit amet</h3> -->
+                    <p>We treat yogurt as living art — crafted by hand, in small batches, in Mexico City.
+                        Each jar is a living culture that feeds your inner ecosystem and reconnects you with nature’s
+                        intelligence.
+                    </p>
+                    <p>WInspired by Esperanza, my mentor and grandmother figure, whose patience and curiosity sparked my
+                        love for fermentation.
+                    </p>
+                    <p>Laboratorio Esperanza carries her name — a space where science and intuition meet to cultivate
+                        living nourishment.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <!-- <div class="image-placeholder ingredients-image"></div> -->
         <div class="container">
             <h2>Choose Your Plan</h2>
             <div class="pricing-grid">
                 <div class="price-box featured">
                     <h3>Subscription</h3>
                     <div class="price">$550</div>
-                    <p><span>/week</span></p>
+                    
+                    <p><span>$1,100/bi-weekly</span></p>
                     <button class="cta-button">Subscribe</button>
                 </div>
                 <div class="price-box">
@@ -123,15 +199,16 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- <section class="cta-section">
         <div class="container">
             <div class="cta-content">
                 <h2>Crafted & Fermented 48 Hours for a Thick and Tangy Plant-Based Yogurt.</h2>
                 <button class="cta-button large">Get it Delivered</button>
-                <p class="instagram-text">Find us on Instagram → <a href="#" class="instagram-link">@reuteri_yogurt</a></p>
+                <p class="instagram-text">Find us on Instagram → <a href="#" class="instagram-link">@reuteri_yogurt</a>
+                </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -143,5 +220,5 @@
     <!-- JavaScript for animated bacteria -->
     <script src="bacteria-animation.js"></script>
 </body>
-</html>
 
+</html>

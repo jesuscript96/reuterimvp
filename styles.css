@@ -17,21 +17,21 @@ body {
     top: 15px;
     right: 15px;
     z-index: 1000;
-    background-color: #9c6d41;
-    color: white;
+    background-color: #d75527;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-    border-radius: 25px;
+    border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 .fixed-subscribe:hover {
-    background-color: #708238;
+    background-color: #c04517;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
@@ -52,14 +52,29 @@ body {
 .content-section {
     min-height: auto;
     overflow: visible;
+    position: relative;
+    background-color: #f3d6ae;
 }
 
-.content-section:nth-child(odd) {
-    background-color: #f8f9fa;
+.content-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f3d6ae;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
 }
 
-.content-section:nth-child(even) {
-    background-color: #e9ecef;
+.content-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .content-grid {
@@ -82,12 +97,12 @@ body {
 
 /* Specific section images */
 .story-image {
-    background-image: url("img/eatin916.png");
+    background-image: url("img/yogurfondomarron.png");
     background-color: #ffb74d;
 }
 
 .process-image {
-    background-image: url("img/maria916.png");
+    background-image: url("img/maquinamarron.png");
     background-color: #81c784;
 }
 
@@ -97,7 +112,7 @@ body {
 }
 
 .research-image {
-    background-image: url("img/research916.png");
+    background-image: url("img/researchconfondo.png");
     background-color: #b3e5fc;
 }
 
@@ -114,13 +129,13 @@ body {
 .content h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #708238;
+    color: #d75527;
 }
 
 .content h3 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: #708238;
+    color: #d75527;
 }
 
 .content p {
@@ -145,7 +160,7 @@ body {
 
 .ingredients-list li:before {
     content: "•";
-    color: #708238;
+    color: #d75527;
     font-size: 1.5rem;
     position: absolute;
     left: 0;
@@ -163,12 +178,16 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: white;
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.process-step p {
+    margin: 0;
 }
 
 .step-number {
-    background-color: #708238;
+    background-color: #d75527;
     color: white;
     width: 40px;
     height: 40px;
@@ -191,7 +210,7 @@ body {
 }
 
 .links-list a {
-    color: #708238;
+    color: #d75527;
     text-decoration: none;
     padding: 0.5rem 0;
     display: block;
@@ -200,20 +219,42 @@ body {
 }
 
 .links-list a:hover {
-    color: #708238;
+    color: #d75527;
 }
 
 /* Pricing Section */
 .pricing {
-    background-color: #f8f9fa;
+    background-color: #f3d6ae;
     padding: 4rem 20px;
+    position: relative;
+}
+
+.pricing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f3d6ae;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pricing > * {
+    position: relative;
+    z-index: 1;
 }
 
 .pricing h2 {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 2rem;
-    color: #333;
+    color: #d75527;
 }
 
 .pricing-grid {
@@ -227,7 +268,7 @@ body {
 .price-box {
     background-color: white;
     padding: 2.5rem 2rem;
-    border-radius: 12px;
+    border-radius: 4px;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -240,22 +281,22 @@ body {
 }
 
 .price-box.featured {
-    background-color: #708238;
+    background-color: #d75527;
     color: white;
-    border: 2px solid #708238;
+    border: 2px solid #d75527;
     position: relative;
 }
 
 .price-box.featured::before {
-    content: 'MOST POPULAR';
+    content: 'GET DISCOUNT';
     position: absolute;
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #9c6d41;
+    background-color: #000000;
     color: white;
     padding: 5px 20px;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -271,7 +312,7 @@ body {
     font-size: 3rem;
     font-weight: bold;
     margin: 1.5rem 0;
-    color: #9c6d41;
+    color: #000000;
 }
 
 .featured .price {
@@ -297,19 +338,26 @@ body {
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
+    background-color: #d75527;
+    color: #000000;
+}
+
+.price-box .cta-button:hover {
+    background-color: #c04517;
 }
 
 .featured .cta-button {
-    background-color: #9c6d41;
+    background-color: black;
+    color: white;
 }
 
 .featured .cta-button:hover {
-    background-color: #7d5533;
+    background-color: black;
 }
 
 /* CTA Section */
 .cta-section {
-    background-color: #708238;
+    background-color: #d75527;
     color: white;
     padding: 3rem 20px;
     text-align: center;
@@ -323,12 +371,12 @@ body {
 }
 
 .cta-button {
-    background-color: #9c6d41;
-    color: white;
+    background-color: #d75527;
+    color: black;
     border: none;
     padding: 1rem 2rem;
     font-size: 1rem;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 1.5rem;
@@ -337,7 +385,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #708238;
+    background-color: #d75527;
     transform: translateY(-2px);
 }
 
@@ -389,7 +437,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     padding: 2rem;
-    border-radius: 5px;
+    border-radius: 2px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -406,7 +454,7 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .testimonial-item:nth-child(1) {
@@ -453,7 +501,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #708238;
+    background-color: #d75527;
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -475,6 +523,10 @@ body {
 
     /* Content sections for tablet */
     .content-section {
+        overflow: hidden;
+    }
+
+    .content-section::before {
         overflow: hidden;
     }
 
@@ -682,26 +734,227 @@ body {
 /* Hero Section */
 .hero {
     width: 100%;
-    max-height: 100vh;
-    background-color: #ffffff;
+    height: 60vh;
+    background-color: #f3d6ae;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
+    padding: 1rem 0.5rem;
     overflow: hidden;
 }
 
 .hero-image {
-    max-width: 110%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
     display: block;
 }
 
-/* Tablet and Desktop - reduce image size */
+/* Tablet and Desktop - hero image */
 @media (min-width: 768px) {
+    .hero {
+        height: 100vh;
+        padding: 3rem 2rem;
+    }
+
     .hero-image {
-        max-width: 100%;
-        max-height: 90vh;
+        max-width: 95%;
+        max-height: 95%;
         object-fit: contain;
+    }
+}
+/* ==================== ACCORDIONS SECTION ==================== */
+
+.accordion-container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.accordion-item {
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-header:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.accordion-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    letter-spacing: 0.02em;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #555;
+    transition: transform 0.3s ease;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+details[open] .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Studies List */
+.studies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.studies-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.studies-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #d75527;
+    font-weight: 600;
+}
+
+.studies-list a {
+    color: #2c2c2c;
+    text-decoration: none;
+    line-height: 1.6;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.studies-list a:hover {
+    color: #d75527;
+    text-decoration: underline;
+}
+
+/* Recipes List */
+.recipes-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.recipe-card {
+    padding: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    border-left: 4px solid #d75527;
+    transition: all 0.3s ease;
+}
+
+.recipe-card:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.recipe-card h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #2c2c2c;
+}
+
+.recipe-ingredients {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.recipe-benefits {
+    font-size: 0.9rem;
+    color: #d75527;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Accordion Styles */
+@media (min-width: 768px) {
+    .accordion-title {
+        font-size: 1.5rem;
+    }
+
+    .accordion-header {
+        padding: 1.5rem 2rem;
+    }
+
+    .accordion-content {
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    .recipes-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+    }
+
+    .studies-list li {
+        margin-bottom: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .accordion-item {
+        margin-bottom: 2rem;
+    }
+
+    .accordion-header {
+        padding: 1.75rem 2.5rem;
+    }
+
+    .accordion-content {
+        padding: 0 2.5rem 2.5rem 2.5rem;
     }
 }
