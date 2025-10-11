@@ -34,7 +34,7 @@
             <div class="container center">
                 <!-- <div class="content-grid"> -->
                     <div class="content">
-                        <h2>Ingredients</h2>
+                        <img src="img/ingredients.png" alt="Ingredients" class="promo-image">
                         <ul class="ingredients-list">
                             <li>Coconut</li>
                             <li>Water</li>
@@ -56,7 +56,7 @@
             <div class="content-grid">
                 <div class="image-placeholder process-image"></div>
                 <div class="content">
-                    <h2>Our Process</h2>
+                    <img src="img/process.png" alt="Our Process" class="promo-image">
                     <div class="process-steps">
                         <div class="process-step">
                             <span class="step-icon">⏱</span>
@@ -86,7 +86,7 @@
             <div class="content-grid">
                 <div class="image-placeholder research-image"></div>
                 <div class="content">
-                    <h2>Research and resources</h2>
+                    <img src="img/rr.png" alt="Research and resources" class="promo-image">
                     <div class="accordion-container">
                 <!-- Scientific Studies Accordion -->
                 <details class="accordion-item">
@@ -166,7 +166,7 @@
             <div class="content-grid">
                 <div class="image-placeholder story-image"></div>
                 <div class="content">
-                    <h2>About Us</h2>
+                    <img src="img/aboutus.png" alt="About Us" class="promo-image">
                     <!-- <h3>Lorem ipsum dolor sit amet</h3> -->
                     <p>We treat yogurt as living art — crafted by hand, in small batches, in Mexico City.
                         Each jar is a living culture that feeds your inner ecosystem and reconnects you with nature’s
@@ -187,7 +187,7 @@
     <section id="pricing" class="pricing">
         <!-- <div class="image-placeholder ingredients-image"></div> -->
         <div class="container">
-            <h2>Choose Your Plan</h2>
+            <img src="img/plan.png" alt="Choose Your Plan" class="promo-image">
             <h3>Free Sunday Delivery!</h3>
             <div class="pricing-grid">
                 <div class="price-box featured">
@@ -227,10 +227,12 @@
                 <div class="discount-text-content">
                     <!-- <h2>Get a 15% Discount</h2> -->
                     <p>Subscribe to our newsletter and get a 15% discount on your next purchase.</p>
-                    <form class="discount-form">
-                        <input type="email" placeholder="Enter your email">
+                    <form class="discount-form" id="registro-form">
+                        <input type="text" placeholder="Enter your name" id="name">
+                        <input type="email" placeholder="Enter your email" id="email">
                         <button type="submit" class="cta-button formbutton">Subscribe</button>
                     </form>
+                    <p id="feedback-message"></p>
                 </div>
             </div>
             <p class="instagram-text">Follow us on Instagram</p>
@@ -255,6 +257,61 @@
 
     <!-- JavaScript for animated bacteria -->
     <script src="bacteria-animation.js"></script>
+
+    <!-- Script para manejar el envío al Webhook de Make -->
+    <script>
+        document.getElementById('registro-form').addEventListener('submit', function(e) {
+            // Previene el envío por defecto del formulario (evita la recarga de la página)
+            e.preventDefault(); 
+
+            // 1. Obtiene el valor del correo y el contenedor de mensajes
+            const nameInput = document.getElementById('name');
+            const name = nameInput.value;
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value;
+            const messageElement = document.getElementById('feedback-message');
+            messageElement.textContent = 'Enviando...';
+            messageElement.className = '';
+
+            // 2. Define la URL del Webhook de Make
+            const webhookURL = 'https://hook.eu2.make.com/1tcovulj5fymjuwskvopmgc6gjmu7s0f'; 
+
+            // 3. Envía los datos usando la API Fetch
+            fetch(webhookURL, {
+                method: 'POST',
+                // Es crucial indicar que estamos enviando datos en formato JSON
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                // Convierte el objeto JavaScript a una cadena JSON
+                body: JSON.stringify({ 
+                    name: name,
+                    email: email,
+                    origin: "web lead"
+                }) 
+            })
+            .then(response => {
+                // El Webhook de Make devuelve un estado 200/202 si lo recibe correctamente
+                if (response.ok) {
+                    messageElement.textContent = 'Thanks! Now check your email to get your discount code!';
+                    messageElement.className = 'success';
+                    nameInput.value = ''; // Limpia el campo
+                    emailInput.value = ''; // Limpia el campo
+                } else {
+                    // Manejo si el Webhook no responde correctamente
+                    messageElement.textContent = 'Error: Unable to conect to server';
+                    messageElement.className = 'error';
+                    console.error('Error al enviar al Webhook:', response.status, response.statusText);
+                }
+            })
+            .catch(error => {
+                // Manejo de errores de red
+                messageElement.textContent = 'Error Internet connection lost';
+                messageElement.className = 'error';
+                console.error('Error en la conexión:', error);
+            });
+        });
+    </script>
 </body>
 
 </html>
