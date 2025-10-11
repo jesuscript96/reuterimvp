@@ -134,6 +134,15 @@ body {
     background-color: #f3d8af;
 }
 
+.center {
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+  
+    /* Opcional: Centrar también verticalmente */
+    /* align-items: center; */
+    /* height: 100vh; /* Requiere altura para centrado vertical */
+}
+
 .content {
     flex: 1;
     width: 100%;
