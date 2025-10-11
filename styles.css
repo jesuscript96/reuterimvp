@@ -557,8 +557,8 @@ body {
 .footer-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: left;
+    /* gap: 1rem; */
 }
 
 .footer p {
