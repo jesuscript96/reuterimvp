@@ -561,7 +561,7 @@ body {
 }
 
 .testimonial-item p {
-    font-style: italic;
+    font-style: normal;
     color: white;
     position: relative;
     z-index: 1;
