@@ -100,3 +100,32 @@
     │    <span>@laboratorio.esperanza</span>                           │
     │    </a>                                                              │
     │    </div>  
+
+
+
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <!-- <div class="image-placeholder ingredients-image"></div> -->
+        <div class="container">
+            <!-- <img src="img/CYP.png" alt="Choose Your Plan" class="promo-image"> -->
+            <h1 class="section-title"><span>C</span><span class="black-letter">h</span><span>o</span><span class="black-letter">o</span><span>s</span><span>e</span><span> </span><span>Y</span><span>o</span><span>u</span><span>r</span><span> </span><span>P</span><span class="black-letter">l</span><span>a</span><span>n</span></h1>
+            <h3>Free Sunday Delivery!</h3>
+            <div class="pricing-grid">
+                <div class="price-box featured">
+                    <h3>Subscription</h3>
+                    <div class="price">$550</div>
+                    
+                    <p><span>$1,100/bi-weekly</span></p>
+                    <a href="https://buy.stripe.com/14AfZjdx1egk2V38u91wY06" class="cta-button">Subscribe</a>
+                </div>
+                <!-- <div class="price-box gap">
+                    <h3>Single Purchase</h3>
+                    <div class="price">$700</div>
+                    <p></p>
+                    <a href="https://buy.stripe.com/7sY00l50v2xC8fn11H1wY07" class="cta-button">Buy Once</a>
+                </div> -->
+            </div>
+        </div>
+    </section>
