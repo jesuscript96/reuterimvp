@@ -1548,22 +1548,70 @@ details[open] .accordion-icon {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    flex: 1;
+    min-height: 380px;
 }
 
 .product-title {
     font-family: 'Embossing Tape', 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #2c2c2c;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.75rem 0;
     font-weight: 600;
 }
 
-.product-price {
-    font-size: 1.5rem;
+/* Product Pricing Options */
+.product-pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.option-price {
+    font-size: 1.04rem;
     font-weight: 700;
     color: #d75527;
-    margin: 0 0 1rem 0;
+}
+
+.price-unit {
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.product-cta-button {
+    background-color: #d75527;
+    color: #000000;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Embossing Tape', 'Poppins', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.product-cta-button:hover {
+    background-color: #c04517;
+    transform: translateY(-2px);
+}
+
+.product-cta-button.subscribe {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.product-cta-button.subscribe:hover {
+    background-color: #333333;
 }
 
 /* Product Accordion */
@@ -1604,9 +1652,9 @@ details[open] .accordion-icon {
 }
 
 .product-accordion-content p {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
     color: #333;
 }
 
@@ -1617,7 +1665,7 @@ details[open] .accordion-icon {
 .product-benefits {
     color: #d75527 !important;
     font-weight: 500;
-    font-size: 0.8rem !important;
+    font-size: 0.7rem !important;
 }
 
 /* Tablet Styles */
@@ -1640,14 +1688,20 @@ details[open] .accordion-icon {
 
     .product-info {
         padding: 1.5rem;
+        min-height: 420px;
     }
 
     .product-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
-    .product-price {
-        font-size: 1.8rem;
+    .option-price {
+        font-size: 1.12rem;
+    }
+
+    .product-cta-button {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.7rem;
     }
 
     .product-accordion-content p {
@@ -1665,15 +1719,30 @@ details[open] .accordion-icon {
 }
 
 .product-card-featured .product-image {
-    height: 200px;
+    height: 400px;
+}
+
+.product-card-featured .product-info {
+    min-height: auto;
 }
 
 .product-card-featured .product-title {
     font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
 
-.product-card-featured .product-price {
-    font-size: 2rem;
+.product-card-featured .option-price {
+    font-size: 1.44rem;
+}
+
+.product-card-featured .product-cta-button {
+    padding: 0.45rem 1rem;
+    font-size: 0.8rem;
+}
+
+/* Featured Product Image - Hidden on Mobile */
+.product-featured-image {
+    display: none;
 }
 
 /* Desktop: 4 Cards Horizontal */
@@ -1687,28 +1756,74 @@ details[open] .accordion-icon {
         height: 250px;
     }
 
+    .product-card:not(.product-card-featured) .product-info {
+        min-height: 450px;
+    }
+
     .product-title {
+        font-size: 1.1rem;
+    }
+
+    .option-price {
         font-size: 1.2rem;
     }
 
-    .product-price {
-        font-size: 2rem;
+    .product-cta-button {
+        padding: 0.4rem 0.9rem;
+        font-size: 0.75rem;
     }
 
     .product-accordion-header {
         padding: 1rem;
     }
 
+    .product-card-featured {
+        grid-column: 1 / 3;
+    }
+
     .product-card-featured .product-image {
-        height: 350px;
+        height: 490px;
+    }
+
+    .product-card-featured .product-info {
+        min-height: auto;
     }
 
     .product-card-featured .product-title {
         font-size: 1.8rem;
     }
 
-    .product-card-featured .product-price {
-        font-size: 2.5rem;
+    .product-card-featured .option-price {
+        font-size: 1.76rem;
+    }
+
+    .product-card-featured .product-cta-button {
+        padding: 0.55rem 1.3rem;
+        font-size: 0.9rem;
+    }
+
+    .product-card-featured .product-accordion-content p {
+        font-size: 0.9rem;
+    }
+
+    .product-card-featured .product-benefits {
+        font-size: 0.85rem !important;
+    }
+
+    /* Featured Product Image - Show on Desktop */
+    .product-featured-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f3d6ae;
+        grid-column: 3 / 5;
+        padding: 2rem;
+    }
+
+    .product-featured-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }
 
