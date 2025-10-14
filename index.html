@@ -70,10 +70,10 @@
                             </div>
                             <div class="pricing-option">
                                 <span class="option-price">$550<span class="price-unit">/u</span></span>
-                                <a href="https://buy.stripe.com/9B68wReB53BGbrzeSx1wY0d" class="product-cta-button subscribe">Subscribe</a>
+                                <a href="https://buy.stripe.com/9B68wReB5dcgbrzeSx1wY0d" class="product-cta-button subscribe">Subscribe</a>
                             </div>
                         </div>
-                        <details class="product-accordion" open>
+                        <details class="product-accordion">
                             <summary class="product-accordion-header">
                                 <span>+ Info</span>
                             </summary>
@@ -107,7 +107,7 @@
                                 <a href="https://buy.stripe.com/9B65kFeB5dcg1QZeSx1wY0b" class="product-cta-button subscribe">Subscribe</a>
                             </div>
                         </div>
-                        <details class="product-accordion" open>
+                        <details class="product-accordion">
                             <summary class="product-accordion-header">
                                 <span>+ Info</span>
                             </summary>
@@ -136,7 +136,7 @@
                                 <a href="https://buy.stripe.com/6oUeVf78D1ty1QZeSx1wY09" class="product-cta-button">Buy Once</a>
                             </div>
                         </div>
-                        <details class="product-accordion" open>
+                        <details class="product-accordion">
                             <summary class="product-accordion-header">
                                 <span>+ Info</span>
                             </summary>
@@ -166,7 +166,7 @@
                                     <a href="#" class="product-cta-button subscribe">Subscribe</a>
                                 </div> -->
                         </div>
-                        <details class="product-accordion" open>
+                        <details class="product-accordion">
                             <summary class="product-accordion-header">
                                 <span>+ Info</span>
                             </summary>
@@ -196,7 +196,7 @@
                                 <a href="#" class="product-cta-button subscribe">Subscribe</a>
                             </div> -->
                         </div>
-                        <details class="product-accordion" open>
+                        <details class="product-accordion">
                             <summary class="product-accordion-header">
                                 <span>+ Info</span>
                             </summary>
@@ -451,6 +451,16 @@
                 messageElement.className = 'error';
                 console.error('Error en la conexión:', error);
             });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.innerWidth >= 1024) {
+                const accordions = document.querySelectorAll('.product-accordion');
+                accordions.forEach(accordion => {
+                    accordion.setAttribute('open', '');
+                });
+            }
         });
     </script>
 </body>
