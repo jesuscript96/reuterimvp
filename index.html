@@ -7,37 +7,40 @@
     <title>LABORATORIO ESPERANZA | Prácticas del Tiempo</title>
     <link rel="icon" type="image/webp" href="img/bacteriashare2.webp">
     <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="language-toggle.css">
 </head>
 
-<body>
+<body class="index-page">
     <header class="header">
-        <h1 class="main-title">LABORATORIO ESPERANZA</h1>
-        <p class="subtitle">PRÁCTICAS DEL TIEMPO</p>
+        <h1 class="main-title" data-i18n="main-title">LABORATORIO ESPERANZA</h1>
+        <p class="subtitle" data-i18n="main-subtitle">PRÁCTICAS DEL TIEMPO</p>
     </header>
 
     <main class="verticals-container">
         <a href="fera.html" class="vertical-item">
             <h2 class="vertical-title">FERA</h2>
-            <p class="vertical-subtitle">Cultivos fermentados</p>
-            <p class="vertical-status">En investigación</p>
+            <p class="vertical-subtitle" data-i18n="fera-desc">Cultivos fermentados</p>
+            <p class="vertical-status" data-i18n="fera-status">En investigación</p>
         </a>
 
         <a href="kura.html" class="vertical-item">
             <h2 class="vertical-title">KURA</h2>
-            <p class="vertical-subtitle">Carnes añejadas</p>
-            <p class="vertical-status">Disponible</p>
+            <p class="vertical-subtitle" data-i18n="kura-desc">Carnes añejadas</p>
+            <p class="vertical-status" data-i18n="kura-status">Disponible</p>
         </a>
 
         <a href="serva.html" class="vertical-item">
             <h2 class="vertical-title">SERVA</h2>
-            <p class="vertical-subtitle">Conservas</p>
-            <p class="vertical-status">En desarrollo</p>
+            <p class="vertical-subtitle" data-i18n="serva-desc">Conservas</p>
+            <p class="vertical-status" data-i18n="serva-status">En desarrollo</p>
         </a>
     </main>
 
     <footer style="margin-top: auto; padding-top: 2rem; opacity: 0.5; font-size: 0.8rem;">
         <!-- Optional footer content -->
     </footer>
+    <script src="translations.js"></script>
+    <script src="language-manager.js"></script>
 </body>
 
 </html>

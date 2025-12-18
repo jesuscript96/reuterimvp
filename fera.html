@@ -7,10 +7,11 @@
     <title>FERA | YOGUR DE COCO</title>
     <link rel="stylesheet" href="fera.css">
     <link rel="icon" type="image/webp" href="img/bacteriashare2.webp">
+    <link rel="stylesheet" href="language-toggle.css">
 </head>
 
-<body>
-    <a href="index.html" class="back-link birdie-font">← back to lab</a>
+<body class="fera-page">
+    <a href="index.html" class="back-link birdie-font" data-i18n="back-to-lab">← back to lab</a>
     <div class="product-container">
         <!-- Columna Izquierda: Galería -->
         <section class="gallery-col">
@@ -37,36 +38,39 @@
 
         <!-- Columna Derecha: Panel de Conversión -->
         <section class="conversion-col">
-            <nav class="breadcrumbs">Inicio / Tienda / Cultivos Fermentados</nav>
+            <nav class="breadcrumbs">
+                <span data-i18n="breadcrumbs-start">Inicio / Tienda / </span>
+                <span data-i18n="cat-ferments">Cultivos Fermentados</span>
+            </nav>
 
             <header class="product-header">
-                <h1 class="birdie-font">FERA: YOGUR DE COCO</h1>
-                <p class="birdie-font lab-subtitle">Laboratorio Esperanza</p>
+                <h1 class="birdie-font" data-i18n="fera-title">FERA: YOGUR DE COCO</h1>
+                <p class="birdie-font lab-subtitle" data-i18n="lab-subtitle">Laboratorio Esperanza</p>
             </header>
 
             <div class="social-proof">
                 <div class="stars">★★★★★</div>
-                <span class="review-count">128 REVIEWS</span>
+                <span class="review-count">128 <span data-i18n="reviews">REVIEWS</span></span>
             </div>
 
-            <p class="description">
+            <p class="description" data-i18n="fera-tagline">
                 Yogur de coco artesanal, fermentado por 48 horas con L. Reuteri. Probiótico vivo, sin lácteos y 100%
                 natural.
             </p>
 
             <div class="ingredients-wrap birdie-font">
-                <p class="ingredients-title">INGREDIENTES</p>
+                <p class="ingredients-title" data-i18n="ingredients-title">INGREDIENTES</p>
                 <ul class="ingredients-bullets">
-                    <li>COCO</li>
-                    <li>AGUA</li>
-                    <li>INULINA (PREBIÓTICO)</li>
-                    <li>CULTIVO VIVO L. REUTERI</li>
-                    <li>TAPIOCA</li>
+                    <li data-i18n="ing-fera-1">COCO</li>
+                    <li data-i18n="ing-fera-2">AGUA</li>
+                    <li data-i18n="ing-fera-3">INULINA (PREBIÓTICO)</li>
+                    <li data-i18n="ing-fera-4">CULTIVO VIVO L. REUTERI</li>
+                    <li data-i18n="ing-fera-5">TAPIOCA</li>
                 </ul>
             </div>
 
             <div class="variants-selection">
-                <h3 class="birdie-font selector-title">SELECCIONA TAMAÑO</h3>
+                <h3 class="birdie-font selector-title" data-i18n="select-size">SELECCIONA TAMAÑO</h3>
                 <div class="size-grid birdie-font">
                     <button class="size-btn active" data-price="220" data-label="250ML">250ML - $220 MXN</button>
                     <button class="size-btn" data-price="700" data-label="1L">1L - $700 MXN</button>
@@ -76,11 +80,12 @@
             <div class="subscription-selector">
                 <label class="radio-group birdie-font">
                     <input type="radio" name="purchase-type" value="once" checked>
-                    Compra única
+                    <span data-i18n="one-time-purchase">Compra única</span>
                 </label>
                 <label class="radio-group birdie-font">
                     <input type="radio" name="purchase-type" value="subscribe">
-                    Suscripción FERA (Ahorra 10% + Envío Gratis)
+                    <span data-i18n="subscription-save" data-brand="FERA">Suscripción FERA (Ahorra 10% + Envío
+                        Gratis)</span>
                 </label>
             </div>
 
@@ -100,13 +105,13 @@
             <!-- Sección Inferior: Beneficios -->
             <section class="benefits-section birdie-font">
                 <div class="benefit-item">
-                    <span class="benefit-text">PROBIÓTICO VIVO</span>
+                    <span class="benefit-text" data-i18n="fera-benefit-2-short">PROBIÓTICO VIVO</span>
                 </div>
                 <div class="benefit-item">
-                    <span class="benefit-text">SIN LÁCTEOS / VEGAN</span>
+                    <span class="benefit-text" data-i18n="fera-benefit-1-short">SIN LÁCTEOS / VEGAN</span>
                 </div>
                 <div class="benefit-item">
-                    <span class="benefit-text">48H FERMENTACIÓN</span>
+                    <span class="benefit-text" data-i18n="fera-benefit-6-short">48H FERMENTACIÓN</span>
                 </div>
             </section>
         </section>
@@ -116,8 +121,9 @@
     <section class="research-resources" id="fera-process">
         <div class="research-container">
             <header class="research-header">
-                <h2 class="birdie-font">EL PROCESO FERA</h2>
-                <p class="research-subtitle">Ciencia y paciencia para un alimento vivo.</p>
+                <h2 class="birdie-font" data-i18n="fera-process-title">EL PROCESO FERA</h2>
+                <p class="research-subtitle" data-i18n="fera-process-subtitle">Ciencia y paciencia para un alimento
+                    vivo.</p>
             </header>
 
             <div class="research-content-grid">
@@ -135,13 +141,15 @@
                         <button class="accordion-trigger">
                             <div class="trigger-left">
                                 <span class="study-number birdie-font">01</span>
-                                <span class="study-title birdie-font">48 HORAS FERMENTACIÓN</span>
+                                <span class="study-title birdie-font" data-i18n="fera-step1-title">48 HORAS
+                                    FERMENTACIÓN</span>
                             </div>
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-panel">
                             <div class="panel-inner">
-                                <p>Un proceso lento y controlado que permite que las bacterias L. Reuteri se
+                                <p data-i18n="fera-step1-desc">Un proceso lento y controlado que permite que las
+                                    bacterias L. Reuteri se
                                     multipliquen exponencialmente, logrando una densidad probiótica superior.</p>
                             </div>
                         </div>
@@ -152,13 +160,15 @@
                         <button class="accordion-trigger">
                             <div class="trigger-left">
                                 <span class="study-number birdie-font">02</span>
-                                <span class="study-title birdie-font">TEMPERATURA CONTROLADA</span>
+                                <span class="study-title birdie-font" data-i18n="fera-step2-title">TEMPERATURA
+                                    CONTROLADA</span>
                             </div>
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-panel">
                             <div class="panel-inner">
-                                <p>Mantenemos una temperatura constante de 37°C (humana) para optimizar el crecimiento
+                                <p data-i18n="fera-step2-desc">Mantenemos una temperatura constante de 37°C (humana)
+                                    para optimizar el crecimiento
                                     de los cultivos vivos sin dañarlos.</p>
                             </div>
                         </div>
@@ -169,13 +179,15 @@
                         <button class="accordion-trigger">
                             <div class="trigger-left">
                                 <span class="study-number birdie-font">03</span>
-                                <span class="study-title birdie-font">PRUEBAS DE CALIDAD</span>
+                                <span class="study-title birdie-font" data-i18n="fera-step3-title">PRUEBAS DE
+                                    CALIDAD</span>
                             </div>
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-panel">
                             <div class="panel-inner">
-                                <p>Cada lote es revisado para asegurar la textura, pH y vitalidad microbiológica antes
+                                <p data-i18n="fera-step3-desc">Cada lote es revisado para asegurar la textura, pH y
+                                    vitalidad microbiológica antes
                                     de ser envasado.</p>
                             </div>
                         </div>
@@ -190,7 +202,7 @@
         <header class="standard-header">
             <h2 class="birdie-font title-with-accents">
                 <span class="accent-line left"></span>
-                EL ESTÁNDAR FERA
+                <span data-i18n="fera-standard-title">EL ESTÁNDAR FERA</span>
                 <span class="accent-line right"></span>
             </h2>
         </header>
@@ -202,7 +214,7 @@
                     <img src="img/sinpreservantes.png" alt="Plant Based"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">100% PLANT BASED</span>
+                <span class="birdie-font" data-i18n="fera-benefit-1">100% PLANT BASED</span>
             </div>
 
             <!-- Icono: PROBIOTIC POWER -->
@@ -211,7 +223,7 @@
                     <img src="img/50gproteina.png" alt="Probiotic"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">PODER PROBIÓTICO (L. REUTERI)</span>
+                <span class="birdie-font" data-i18n="fera-benefit-2">PODER PROBIÓTICO (L. REUTERI)</span>
             </div>
 
             <!-- Icono: ZERO AZÚCAR -->
@@ -220,7 +232,7 @@
                     <img src="img/Noazucares.png" alt="Zero Azúcar"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">ZERO AZÚCAR AÑADIDA</span>
+                <span class="birdie-font" data-i18n="fera-benefit-3">ZERO AZÚCAR AÑADIDA</span>
             </div>
 
             <!-- Icono: KETO FRIENDLY -->
@@ -229,7 +241,7 @@
                     <img src="img/ketofriendly.png" alt="Keto Friendly"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">100% KETO FRIENDLY</span>
+                <span class="birdie-font" data-i18n="fera-benefit-4">100% KETO FRIENDLY</span>
             </div>
 
             <!-- Icono: SIN CONSERVADORES -->
@@ -238,10 +250,13 @@
                     <img src="img/sinpreservantes.png" alt="Sin Conservadores"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">SIN CONSERVADORES ARTIFICIALES</span>
+                <span class="birdie-font" data-i18n="fera-benefit-5">SIN CONSERVADORES ARTIFICIALES</span>
             </div>
         </div>
     </section>
+
+    <script src="translations.js"></script>
+    <script src="language-manager.js"></script>
 
     <script>
         const sizeBtns = document.querySelectorAll('.size-btn');
@@ -260,7 +275,9 @@
             if (isSubscription) {
                 finalPrice = finalPrice * 0.9;
             }
-            addToCartBtn.innerText = `AGREGAR AL CARRITO - $${Math.round(finalPrice)} MXN`;
+            const label = t('add-to-cart');
+            const currency = t('mxn');
+            addToCartBtn.innerText = `${label} - $${Math.round(finalPrice)} ${currency}`;
         }
 
         sizeBtns.forEach(btn => {

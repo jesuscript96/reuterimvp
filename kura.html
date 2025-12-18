@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KURA | CUETE AÑEJADO</title>
+    <link rel="icon" type="image/webp" href="img/bacteriashare2.webp">
     <link rel="stylesheet" href="kura.css">
+    <link rel="stylesheet" href="language-toggle.css">
 </head>
 
-<body>
-    <a href="index.html" class="back-link birdie-font">← back to lab</a>
+<body class="kura-page">
+    <a href="index.html" class="back-link birdie-font" data-i18n="back-to-lab">← back to lab</a>
     <div class="product-container">
         <!-- Columna Izquierda: Galería -->
         <section class="gallery-col">
@@ -39,35 +41,38 @@
 
         <!-- Columna Derecha: Panel de Conversión -->
         <section class="conversion-col">
-            <nav class="breadcrumbs">Inicio / Tienda / Carnes Añejadas</nav>
+            <nav class="breadcrumbs">
+                <span data-i18n="breadcrumbs-start">Inicio / Tienda / </span>
+                <span data-i18n="cat-meats">Carnes Añejadas</span>
+            </nav>
 
             <header class="product-header">
-                <h1 class="birdie-font">KURA: CUETE AÑEJADO</h1>
-                <p class="birdie-font lab-subtitle">Laboratorio Esperanza</p>
+                <h1 class="birdie-font" data-i18n="kura-title">KURA: CUETE AÑEJADO</h1>
+                <p class="birdie-font lab-subtitle" data-i18n="lab-subtitle">Laboratorio Esperanza</p>
             </header>
 
             <div class="social-proof">
                 <div class="stars">★★★★★</div>
-                <span class="review-count">352 REVIEWS</span>
+                <span class="review-count">352 <span data-i18n="reviews">REVIEWS</span></span>
             </div>
 
-            <p class="description">
+            <p class="description" data-i18n="kura-tagline">
                 Carne de libre pastoreo, curada sin calor (5+ días). Sin azúcar, Keto-friendly y 100% natural.
             </p>
 
             <div class="ingredients-wrap birdie-font">
-                <p class="ingredients-title">INGREDIENTES</p>
+                <p class="ingredients-title" data-i18n="ingredients-title">INGREDIENTES</p>
                 <ul class="ingredients-bullets">
-                    <li>CUETE</li>
-                    <li>SAL</li>
-                    <li>VINAGRE DE MANZANA</li>
-                    <li>SEMILLAS DE CILANTRO</li>
-                    <li>PIMIENTA NEGRA</li>
+                    <li data-i18n="ing-kura-1">CUETE</li>
+                    <li data-i18n="ing-kura-2">SAL</li>
+                    <li data-i18n="ing-kura-3">VINAGRE DE MANZANA</li>
+                    <li data-i18n="ing-kura-4">SEMILLAS DE CILANTRO</li>
+                    <li data-i18n="ing-kura-5">PIMIENTA NEGRA</li>
                 </ul>
             </div>
 
             <div class="variants-selection">
-                <h3 class="birdie-font selector-title">SELECCIONA TAMAÑO</h3>
+                <h3 class="birdie-font selector-title" data-i18n="select-size">SELECCIONA TAMAÑO</h3>
                 <div class="size-grid birdie-font">
                     <button class="size-btn active" data-price="170" data-label="50G">50G - $170 MXN</button>
                     <button class="size-btn" data-price="329" data-label="100G">100G - $329 MXN</button>
@@ -79,11 +84,12 @@
             <div class="subscription-selector">
                 <label class="radio-group birdie-font">
                     <input type="radio" name="purchase-type" value="once" checked>
-                    Compra única
+                    <span data-i18n="one-time-purchase">Compra única</span>
                 </label>
                 <label class="radio-group birdie-font">
                     <input type="radio" name="purchase-type" value="subscribe">
-                    Suscripción KURA (Ahorra 10% + Envío Gratis)
+                    <span data-i18n="subscription-save" data-brand="KURA">Suscripción KURA (Ahorra 10% + Envío
+                        Gratis)</span>
                 </label>
             </div>
 
@@ -103,10 +109,11 @@
             <!-- Sección Inferior: Beneficios -->
             <section class="benefits-section birdie-font">
                 <div class="benefit-item">
-                    <span class="benefit-text">50G DE PROTEÍNA POR 100G</span>
+                    <span class="benefit-text">50G <span data-i18n="kura-benefit-2-part">DE PROTEÍNA POR
+                            100G</span></span>
                 </div>
                 <div class="benefit-item">
-                    <span class="benefit-text">ZERO AZÚCAR / KETO</span>
+                    <span class="benefit-text" data-i18n="kura-benefit-3-short">ZERO AZÚCAR / KETO</span>
                 </div>
                 <div class="benefit-item">
                     <span class="benefit-text">100 CALORÍAS</span>
@@ -119,8 +126,9 @@
     <section class="research-resources" id="kura-process-merged">
         <div class="research-container">
             <header class="research-header">
-                <h2 class="birdie-font">EL PROCESO KURA</h2>
-                <p class="research-subtitle">Artesanía, tiempo y rigor microbiológico en cada etapa.</p>
+                <h2 class="birdie-font" data-i18n="kura-process-title">EL PROCESO KURA</h2>
+                <p class="research-subtitle" data-i18n="kura-process-subtitle">Artesanía, tiempo y rigor microbiológico
+                    en cada etapa.</p>
             </header>
 
             <div class="research-content-grid">
@@ -138,13 +146,14 @@
                         <button class="accordion-trigger">
                             <div class="trigger-left">
                                 <span class="study-number birdie-font">01</span>
-                                <span class="study-title birdie-font">5+ DIAS SECADO</span>
+                                <span class="study-title birdie-font" data-i18n="kura-step1-title">5+ DIAS SECADO</span>
                             </div>
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-panel">
                             <div class="panel-inner">
-                                <p>Un tiempo de maduración prolongado para lograr la textura y sabor óptimos de forma
+                                <p data-i18n="kura-step1-desc">Un tiempo de maduración prolongado para lograr la textura
+                                    y sabor óptimos de forma
                                     natural.</p>
                             </div>
                         </div>
@@ -155,13 +164,15 @@
                         <button class="accordion-trigger">
                             <div class="trigger-left">
                                 <span class="study-number birdie-font">02</span>
-                                <span class="study-title birdie-font">CURADAS SIN CALOR</span>
+                                <span class="study-title birdie-font" data-i18n="kura-step2-title">CURADAS SIN
+                                    CALOR</span>
                             </div>
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-panel">
                             <div class="panel-inner">
-                                <p>Proceso de curación artesanal sin exposición a altas temperaturas para preservar
+                                <p data-i18n="kura-step2-desc">Proceso de curación artesanal sin exposición a altas
+                                    temperaturas para preservar
                                     nutrientes.</p>
                             </div>
                         </div>
@@ -172,13 +183,15 @@
                         <button class="accordion-trigger">
                             <div class="trigger-left">
                                 <span class="study-number birdie-font">03</span>
-                                <span class="study-title birdie-font">AMBIENTE CON AIRE FILTRADO</span>
+                                <span class="study-title birdie-font" data-i18n="kura-step3-title">AMBIENTE CON AIRE
+                                    FILTRADO</span>
                             </div>
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-panel">
                             <div class="panel-inner">
-                                <p>Garantizamos la máxima higiene y pureza en nuestro taller con sistemas de aire
+                                <p data-i18n="kura-step3-desc">Garantizamos la máxima higiene y pureza en nuestro taller
+                                    con sistemas de aire
                                     filtrado.</p>
                             </div>
                         </div>
@@ -193,7 +206,7 @@
         <header class="standard-header">
             <h2 class="birdie-font title-with-accents">
                 <span class="accent-line left"></span>
-                SNACKING HECHO BIEN
+                <span data-i18n="kura-standard-title">SNACKING HECHO BIEN</span>
                 <span class="accent-line right"></span>
             </h2>
         </header>
@@ -205,7 +218,7 @@
                     <img src="img/Librepastoreo.png" alt="Libre Pastoreo"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">100% LIBRE PASTOREO</span>
+                <span class="birdie-font" data-i18n="kura-benefit-1">100% LIBRE PASTOREO</span>
             </div>
 
             <!-- Icono Brazo Musculoso: 50G DE PROTEÍNA -->
@@ -214,7 +227,7 @@
                     <img src="img/50gproteina.png" alt="50g Proteína"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">50G DE PROTEÍNA (POR 100G)</span>
+                <span class="birdie-font" data-i18n="kura-benefit-2">50G DE PROTEÍNA (POR 100G)</span>
             </div>
 
             <!-- Icono Azúcar Tachada: ZERO AZÚCAR AÑADIDA -->
@@ -223,7 +236,7 @@
                     <img src="img/Noazucares.png" alt="Zero Azúcar"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">ZERO AZÚCAR AÑADIDA</span>
+                <span class="birdie-font" data-i18n="kura-benefit-3">ZERO AZÚCAR AÑADIDA</span>
             </div>
 
             <!-- Icono Pan/Trigo Tachado: 100% KETO FRIENDLY -->
@@ -232,7 +245,7 @@
                     <img src="img/ketofriendly.png" alt="Keto Friendly"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">100% KETO FRIENDLY</span>
+                <span class="birdie-font" data-i18n="kura-benefit-4">100% KETO FRIENDLY</span>
             </div>
 
             <!-- Icono Matraz/Químico Tachado: SIN CONSERVADORES -->
@@ -241,10 +254,13 @@
                     <img src="img/sinpreservantes.png" alt="Sin Conservadores"
                         style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <span class="birdie-font">SIN CONSERVADORES ARTIFICIALES</span>
+                <span class="birdie-font" data-i18n="kura-benefit-5">SIN CONSERVADORES ARTIFICIALES</span>
             </div>
         </div>
     </section>
+
+    <script src="translations.js"></script>
+    <script src="language-manager.js"></script>
 
 
 
@@ -265,7 +281,9 @@
             if (isSubscription) {
                 finalPrice = finalPrice * 0.9;
             }
-            addToCartBtn.innerText = `AGREGAR AL CARRITO - $${Math.round(finalPrice)} MXN`;
+            const label = t('add-to-cart');
+            const currency = t('mxn');
+            addToCartBtn.innerText = `${label} - $${Math.round(finalPrice)} ${currency}`;
         }
 
         sizeBtns.forEach(btn => {

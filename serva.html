@@ -7,16 +7,19 @@
     <title>SERVA | Prácticas del Tiempo</title>
     <link rel="icon" type="image/webp" href="img/bacteriashare2.webp">
     <link rel="stylesheet" href="serva.css">
+    <link rel="stylesheet" href="language-toggle.css">
 </head>
 
-<body>
-    <a href="index.html" class="back-link">← back to lab</a>
+<body class="serva-page">
+    <a href="index.html" class="back-link" data-i18n="back-to-lab">← back to lab</a>
     <main class="serva-container">
-        <h1 class="coming-soon-title">PRÓXIMAMENTE...</h1>
+        <h1 class="coming-soon-title" data-i18n="serva-coming-soon">PRÓXIMAMENTE...</h1>
         <div class="image-container">
             <img src="img/serva_hero.webp" alt="SERVA Hero Image" class="hero-image">
         </div>
     </main>
+    <script src="translations.js"></script>
+    <script src="language-manager.js"></script>
 </body>
 
 </html>

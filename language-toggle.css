@@ -1,0 +1,55 @@
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: 'Birdie', sans-serif;
+    /* Fallback to sans-serif if Birdie not loaded */
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.5;
+    padding: 2px 5px;
+    transition: opacity 0.2s, font-weight 0.2s;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.lang-btn.active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.lang-divider {
+    margin: 0 5px;
+    opacity: 0.3;
+}
+
+/* Adjust for specific page backgrounds if needed */
+body.index-page .language-toggle {
+    color: #fe5f0f;
+}
+
+body.kura-page .language-toggle {
+    color: #D12D30;
+}
+
+body.fera-page .language-toggle {
+    color: #fff;
+}
+
+body.serva-page .language-toggle {
+    color: #a6ce43;
+}
