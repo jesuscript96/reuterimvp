@@ -15,23 +15,10 @@
     <div class="product-container">
         <!-- Columna Izquierda: Galería -->
         <section class="gallery-col">
-            <div class="gallery-layout">
-                <div class="thumbnails-sidebar">
-                    <div class="thumbnail-item">
-                        <img src="img/pequeño.png" alt="Thumb 1"
-                            style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-                    <div class="thumbnail-item">
-                        <img src="img/boteyogur.png" alt="Thumb 2"
-                            style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-                    <div class="thumbnail-item">
-                        <img src="img/yogurfondomarron.png" alt="Thumb 3"
-                            style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-                </div>
+            <div class="gallery-layout single-image-layout">
                 <div class="main-image-container">
-                    <img src="img/Nofondoyogur.png" alt="FERA Yogurt" class="main-product-img">
+                    <div class="investigation-banner birdie-font">EN INVESTIGACIÓN</div>
+                    <img src="img/Yoguresproducto.png" alt="FERA Yogurt" class="main-product-img">
                 </div>
             </div>
         </section>
@@ -48,10 +35,7 @@
                 <p class="birdie-font lab-subtitle" data-i18n="lab-subtitle">Laboratorio Esperanza</p>
             </header>
 
-            <div class="social-proof">
-                <div class="stars">★★★★★</div>
-                <span class="review-count">128 <span data-i18n="reviews">REVIEWS</span></span>
-            </div>
+
 
             <p class="description" data-i18n="fera-tagline">
                 Yogur de coco artesanal, fermentado por 48 horas con L. Reuteri. Probiótico vivo, sin lácteos y 100%
@@ -77,17 +61,7 @@
                 </div>
             </div>
 
-            <div class="subscription-selector">
-                <label class="radio-group birdie-font">
-                    <input type="radio" name="purchase-type" value="once" checked>
-                    <span data-i18n="one-time-purchase">Compra única</span>
-                </label>
-                <label class="radio-group birdie-font">
-                    <input type="radio" name="purchase-type" value="subscribe">
-                    <span data-i18n="subscription-save" data-brand="FERA">Suscripción FERA (Ahorra 10% + Envío
-                        Gratis)</span>
-                </label>
-            </div>
+
 
             <div class="purchase-actions">
                 <div class="purchase-row">
@@ -130,7 +104,7 @@
                 <!-- Column 1: Image -->
                 <div class="research-image-col">
                     <div class="research-image-wrapper">
-                        <img src="img/bañomaria.png" alt="FERA Process" class="research-img">
+                        <img src="img/termometronuevo.JPG" alt="FERA Process" class="research-img">
                     </div>
                 </div>
 
@@ -197,63 +171,7 @@
         </div>
     </section>
 
-    <!-- Sección: The FERA Standard -->
-    <section class="kura-standard">
-        <header class="standard-header">
-            <h2 class="birdie-font title-with-accents">
-                <span class="accent-line left"></span>
-                <span data-i18n="fera-standard-title">EL ESTÁNDAR FERA</span>
-                <span class="accent-line right"></span>
-            </h2>
-        </header>
 
-        <div class="benefits-grid">
-            <!-- Icono: PLANT BASED -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/sinpreservantes.png" alt="Plant Based"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="fera-benefit-1">100% PLANT BASED</span>
-            </div>
-
-            <!-- Icono: PROBIOTIC POWER -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/50gproteina.png" alt="Probiotic"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="fera-benefit-2">PODER PROBIÓTICO (L. REUTERI)</span>
-            </div>
-
-            <!-- Icono: ZERO AZÚCAR -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/Noazucares.png" alt="Zero Azúcar"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="fera-benefit-3">ZERO AZÚCAR AÑADIDA</span>
-            </div>
-
-            <!-- Icono: KETO FRIENDLY -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/ketofriendly.png" alt="Keto Friendly"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="fera-benefit-4">100% KETO FRIENDLY</span>
-            </div>
-
-            <!-- Icono: SIN CONSERVADORES -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/sinpreservantes.png" alt="Sin Conservadores"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="fera-benefit-5">SIN CONSERVADORES ARTIFICIALES</span>
-            </div>
-        </div>
-    </section>
 
     <script src="translations.js"></script>
     <script src="language-manager.js"></script>
@@ -264,17 +182,12 @@
         const plusBtn = document.getElementById('plus');
         const minusBtn = document.getElementById('minus');
         const addToCartBtn = document.getElementById('add-to-cart');
-        const purchaseType = document.getElementsByName('purchase-type');
 
         let currentPrice = 220;
         let currentQty = 1;
-        let isSubscription = false;
 
         function updateDisplay() {
             let finalPrice = currentPrice * currentQty;
-            if (isSubscription) {
-                finalPrice = finalPrice * 0.9;
-            }
             const label = t('add-to-cart');
             const currency = t('mxn');
             addToCartBtn.innerText = `${label} - $${Math.round(finalPrice)} ${currency}`;
@@ -301,13 +214,6 @@
                 qtyInput.value = currentQty;
                 updateDisplay();
             }
-        });
-
-        purchaseType.forEach(radio => {
-            radio.addEventListener('change', () => {
-                isSubscription = (radio.value === 'subscribe');
-                updateDisplay();
-            });
         });
 
         // Accordion Logic

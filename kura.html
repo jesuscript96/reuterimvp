@@ -18,23 +18,21 @@
             <div class="gallery-layout">
                 <div class="thumbnails-sidebar">
                     <div class="thumbnail-item">
-                        <img src="img/bacteriashare2.webp" alt="Thumb 1"
-                            style="width: 100%; height: 100%; object-fit: contain; opacity: 0.5;">
+                        <img src="img/carnecita.JPG" alt="Meat 1" class="thumb-img"
+                            onclick="changeMainImage('img/carnecita.JPG')">
                     </div>
                     <div class="thumbnail-item">
-                        <div style="width: 100%; height: 100%; background: #eee; border: 1px dashed #ccc;"></div>
+                        <img src="img/carnecita2.jpeg" alt="Meat 2" class="thumb-img"
+                            onclick="changeMainImage('img/carnecita2.jpeg')">
                     </div>
                     <div class="thumbnail-item">
-                        <div style="width: 100%; height: 100%; background: #eee; border: 1px dashed #ccc;"></div>
+                        <img src="img/Carnecita 3.jpeg" alt="Meat 3" class="thumb-img"
+                            onclick="changeMainImage('img/Carnecita 3.jpeg')">
                     </div>
                 </div>
                 <div class="main-image-container">
-                    <!-- Placeholder image since generation failed -->
-                    <div
-                        style="width: 300px; height: 500px; background: rgba(255,255,255,0.2); border: 2px dashed var(--accent-kura); display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;">
-                        <span class="birdie-font" style="font-size: 24px; color: var(--accent-kura);">IMAGEN DE PRODUCTO
-                            <br> KURA: CUETE AÑEJADO</span>
-                    </div>
+                    <img src="img/carnecita.JPG" id="main-product-img" alt="KURA: CUETE AÑEJADO"
+                        class="main-product-img">
                 </div>
             </div>
         </section>
@@ -50,11 +48,6 @@
                 <h1 class="birdie-font" data-i18n="kura-title">KURA: CUETE AÑEJADO</h1>
                 <p class="birdie-font lab-subtitle" data-i18n="lab-subtitle">Laboratorio Esperanza</p>
             </header>
-
-            <div class="social-proof">
-                <div class="stars">★★★★★</div>
-                <span class="review-count">352 <span data-i18n="reviews">REVIEWS</span></span>
-            </div>
 
             <p class="description" data-i18n="kura-tagline">
                 Carne de libre pastoreo, curada sin calor (5+ días). Sin azúcar, Keto-friendly y 100% natural.
@@ -122,6 +115,64 @@
         </section>
     </div>
 
+    <!-- Sección: The KURA Standard -->
+    <section class="kura-standard">
+        <header class="standard-header">
+            <h2 class="birdie-font title-with-accents">
+                <span class="accent-line left"></span>
+                <span data-i18n="kura-standard-title">SNACKING HECHO BIEN</span>
+                <span class="accent-line right"></span>
+            </h2>
+        </header>
+
+        <div class="benefits-grid">
+            <!-- Icono Vaca: 100% LIBRE PASTOREO -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/Librepastoreo.png" alt="Libre Pastoreo"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font" data-i18n="kura-benefit-1">100% LIBRE PASTOREO</span>
+            </div>
+
+            <!-- Icono Brazo Musculoso: 50G DE PROTEÍNA -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/50gproteina.png" alt="50g Proteína"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font" data-i18n="kura-benefit-2">50G DE PROTEÍNA (POR 100G)</span>
+            </div>
+
+            <!-- Icono Azúcar Tachada: ZERO AZÚCAR AÑADIDA -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/Noazucares.png" alt="Zero Azúcar"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font" data-i18n="kura-benefit-3">ZERO AZÚCAR AÑADIDA</span>
+            </div>
+
+            <!-- Icono Pan/Trigo Tachado: 100% KETO FRIENDLY -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/ketofriendly.png" alt="Keto Friendly"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font" data-i18n="kura-benefit-4">100% KETO FRIENDLY</span>
+            </div>
+
+            <!-- Icono Matraz/Químico Tachado: SIN CONSERVADORES -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/sinpreservantes.png" alt="Sin Conservadores"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font" data-i18n="kura-benefit-5">SIN CONSERVADORES ARTIFICIALES</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Section: The Process - Accordion Layout -->
     <section class="research-resources" id="kura-process-merged">
         <div class="research-container">
@@ -135,7 +186,7 @@
                 <!-- Column 1: Image -->
                 <div class="research-image-col">
                     <div class="research-image-wrapper">
-                        <img src="img/anejando.png" alt="KURA Process" class="research-img">
+                        <img src="img/PROCESOCARNE.webp" alt="KURA Process" class="research-img">
                     </div>
                 </div>
 
@@ -201,70 +252,16 @@
         </div>
     </section>
 
-    <!-- Sección: The KURA Standard -->
-    <section class="kura-standard">
-        <header class="standard-header">
-            <h2 class="birdie-font title-with-accents">
-                <span class="accent-line left"></span>
-                <span data-i18n="kura-standard-title">SNACKING HECHO BIEN</span>
-                <span class="accent-line right"></span>
-            </h2>
-        </header>
-
-        <div class="benefits-grid">
-            <!-- Icono Vaca: 100% LIBRE PASTOREO -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/Librepastoreo.png" alt="Libre Pastoreo"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="kura-benefit-1">100% LIBRE PASTOREO</span>
-            </div>
-
-            <!-- Icono Brazo Musculoso: 50G DE PROTEÍNA -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/50gproteina.png" alt="50g Proteína"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="kura-benefit-2">50G DE PROTEÍNA (POR 100G)</span>
-            </div>
-
-            <!-- Icono Azúcar Tachada: ZERO AZÚCAR AÑADIDA -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/Noazucares.png" alt="Zero Azúcar"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="kura-benefit-3">ZERO AZÚCAR AÑADIDA</span>
-            </div>
-
-            <!-- Icono Pan/Trigo Tachado: 100% KETO FRIENDLY -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/ketofriendly.png" alt="Keto Friendly"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="kura-benefit-4">100% KETO FRIENDLY</span>
-            </div>
-
-            <!-- Icono Matraz/Químico Tachado: SIN CONSERVADORES -->
-            <div class="benefit-card">
-                <div class="icon-wrap">
-                    <img src="img/sinpreservantes.png" alt="Sin Conservadores"
-                        style="width: 100%; height: 100%; object-fit: contain;">
-                </div>
-                <span class="birdie-font" data-i18n="kura-benefit-5">SIN CONSERVADORES ARTIFICIALES</span>
-            </div>
-        </div>
-    </section>
-
     <script src="translations.js"></script>
     <script src="language-manager.js"></script>
 
 
 
     <script>
+        function changeMainImage(src) {
+            document.getElementById('main-product-img').src = src;
+        }
+
         const sizeBtns = document.querySelectorAll('.size-btn');
         const qtyInput = document.getElementById('qty');
         const plusBtn = document.getElementById('plus');

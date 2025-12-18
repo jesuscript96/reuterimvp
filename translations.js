@@ -21,6 +21,15 @@ const translations = {
         "serva-status": "En desarrollo",
         "serva-desc": "Conservas",
 
+        // About Section
+        "about-1": "Laboratorio Esperanza utiliza el tiempo como herramienta principal.",
+        "about-2": "En ambientes controlados de temperatura y humedad, diseñamos sistemas donde la fermentación, el añejamiento y la preservación transforman los alimentos de forma natural.",
+        "about-3": "El resultado son productos estables, densos en proteína, profundos en sabor y pensados para apoyar la salud digestiva.",
+        "about-4": "Trabajamos en lotes pequeños, sin acelerar procesos.",
+        "about-5": "Fermentar · Añejar · Preservar",
+
+
+
         "kura-benefit-2-part": "DE PROTEÍNA POR 100G",
         "kura-benefit-3-short": "ZERO AZÚCAR / KETO",
         "fera-benefit-1-short": "SIN LÁCTEOS / VEGAN",
@@ -70,6 +79,7 @@ const translations = {
 
         // SERVA Specific
         "serva-coming-soon": "PRÓXIMAMENTE...",
+        "serva-subtitle": "Desarrollando una mantequilla de ajo negro y pistacho.",
 
         // KURA Ingredients
         "ing-kura-1": "CUETE",
@@ -106,6 +116,15 @@ const translations = {
         "kura-desc": "Aged meats",
         "serva-status": "Developing",
         "serva-desc": "Preserves",
+
+        // About Section
+        "about-1": "Esperanza Laboratory uses time as its primary tool.",
+        "about-2": "In controlled environments of temperature and humidity, we design systems where fermentation, aging, and preservation naturally transform food.",
+        "about-3": "The result is stable products, protein-dense, deep in flavor, and designed to support digestive health.",
+        "about-4": "We work in small batches, without rushing processes.",
+        "about-5": "Ferment · Age · Preserve",
+
+
 
         "kura-benefit-2-part": "PROTEIN PER 100G",
         "kura-benefit-3-short": "ZERO SUGAR / KETO",
@@ -156,6 +175,7 @@ const translations = {
 
         // SERVA Specific
         "serva-coming-soon": "COMING SOON...",
+        "serva-subtitle": "Developing a black garlic and pistachio butter.",
 
         // KURA Ingredients
         "ing-kura-1": "BEEF",

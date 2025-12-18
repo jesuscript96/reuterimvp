@@ -27,6 +27,11 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Embossing Tape', 'Poppins', sans-serif;
     line-height: 1.6;
@@ -99,7 +104,7 @@ body {
 }
 
 
-.content-section > * {
+.content-section>* {
     position: relative;
     z-index: 1;
 }
@@ -161,9 +166,11 @@ body {
 }
 
 .center {
-    display: flex; /* Habilita Flexbox */
-    justify-content: center; /* Centra horizontalmente los elementos hijos */
-  
+    display: flex;
+    /* Habilita Flexbox */
+    justify-content: center;
+    /* Centra horizontalmente los elementos hijos */
+
     /* Opcional: Centrar también verticalmente */
     /* align-items: center; */
     /* height: 100vh; /* Requiere altura para centrado vertical */
@@ -243,6 +250,7 @@ body {
 }
 
 @media (min-width: 768px) {
+
     .section-title,
     .ingredients-title {
         font-size: 3rem;
@@ -250,6 +258,7 @@ body {
 }
 
 @media (min-width: 1024px) {
+
     .section-title,
     .ingredients-title {
         font-size: 3.5rem;
@@ -358,7 +367,7 @@ body {
     z-index: 0;
 }
 
-.pricing > * {
+.pricing>* {
     position: relative;
     z-index: 1;
 }
@@ -826,6 +835,7 @@ body {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
+
     /* Subscribe button for tablet */
     .fixed-subscribe {
         padding: 12px 24px;
@@ -1162,6 +1172,7 @@ body {
         width: 100%;
     }
 }
+
 /* ==================== ACCORDIONS SECTION ==================== */
 
 .accordion-container {
@@ -1237,6 +1248,7 @@ details[open] .accordion-icon {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1398,6 +1410,7 @@ details[open] .accordion-icon {
 .discount-form .cta-button {
     width: 100%;
 }
+
 .promo-image {
     width: 100%;
     margin-bottom: 1rem;
@@ -1493,7 +1506,7 @@ details[open] .accordion-icon {
     z-index: 0;
 }
 
-.products-section > * {
+.products-section>* {
     position: relative;
     z-index: 1;
 }
@@ -1765,8 +1778,7 @@ details[open] .accordion-icon {
         height: 250px;
     }
 
-    .product-card:not(.product-card-featured) .product-info {
-    }
+    .product-card:not(.product-card-featured) .product-info {}
 
     .product-title {
         font-size: 1.1rem;
