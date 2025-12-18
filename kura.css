@@ -1,0 +1,755 @@
+@font-face {
+    font-family: 'Birdie';
+    src: url('BirdieTypo/TAYBirdieRegular.woff2') format('woff2'),
+        url('BirdieTypo/TAYBirdieRegular.woff') format('woff'),
+        url('BirdieTypo/TAYBirdieRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg-kura: #CEDF9F;
+    --accent-kura: #D12D30;
+    --text-black: #000000;
+    --text-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-kura);
+    font-family: 'Birdie', sans-serif;
+    color: var(--text-black);
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.birdie-font {
+    font-family: 'Birdie', sans-serif;
+}
+
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: var(--accent-kura);
+    font-size: 1.2rem;
+    z-index: 100;
+    transition: opacity 0.3s;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+/* Layout */
+.product-container {
+    display: flex;
+    width: 100vw;
+    min-height: 80vh;
+}
+
+.gallery-col {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+}
+
+.conversion-col {
+    flex: 0 0 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Gallery Styles */
+.gallery-layout {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.thumbnails-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.thumbnail-item {
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main-image-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-product-img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+/* Conversion Panel Styles */
+.breadcrumbs {
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.product-header h1 {
+    font-size: 48px;
+    color: var(--accent-kura);
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.product-header .lab-subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.social-proof {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.stars {
+    color: var(--accent-kura);
+    font-size: 20px;
+}
+
+.review-count {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.ingredients-wrap {
+    margin-bottom: 30px;
+}
+
+.ingredients-title {
+    font-size: 18px;
+    color: var(--accent-kura);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.ingredients-bullets {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-bullets li {
+    font-size: 14px;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ingredients-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-kura);
+}
+
+/* Variant Selectors */
+.selector-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.size-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.size-btn {
+    background: white;
+    border: 1px solid var(--accent-kura);
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.size-btn.active {
+    background: var(--accent-kura);
+    color: white;
+    border-color: var(--accent-kura);
+}
+
+.subscription-selector {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Purchase Actions */
+.purchase-row {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+
+.quantity-selector {
+    display: flex;
+    border: 1px solid var(--accent-kura);
+    height: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+.quantity-btn {
+    width: 40px;
+    background: transparent;
+    border: none;
+    color: var(--accent-kura);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.add-to-cart-btn {
+    flex-grow: 1;
+    background: var(--accent-kura);
+    color: white;
+    border: none;
+    padding: 0 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    border-radius: 50px;
+}
+
+.add-to-cart-btn:hover {
+    opacity: 0.9;
+}
+
+/* Benefits Section */
+.benefits-section {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.benefit-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    text-align: center;
+    gap: 10px;
+    border: 1px solid var(--accent-kura);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.benefit-icon {
+    display: none;
+}
+
+.benefit-text {
+    font-size: 13px;
+    color: var(--accent-kura);
+    line-height: 1.1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* The KURA Standard Section */
+.kura-standard {
+    background-color: var(--bg-kura);
+    color: var(--text-black);
+    width: 100vw;
+    min-height: 40vh;
+    padding: 60px 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: none;
+}
+
+.standard-header {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.title-with-accents {
+    font-size: 42px;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    text-transform: uppercase;
+    color: var(--accent-kura);
+}
+
+.accent-line {
+    height: 1px;
+    width: 40px;
+    background: var(--accent-kura);
+    position: relative;
+}
+
+.accent-line::before,
+.accent-line::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 25px;
+    background: var(--accent-kura);
+    left: 5px;
+}
+
+.accent-line.left::before {
+    transform: rotate(30deg);
+    top: -10px;
+}
+
+.accent-line.left::after {
+    transform: rotate(-30deg);
+    bottom: -10px;
+}
+
+.accent-line.right::before {
+    transform: rotate(-30deg);
+    top: -10px;
+}
+
+.accent-line.right::after {
+    transform: rotate(30deg);
+    bottom: -10px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.benefit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: scale(1.05);
+}
+
+.icon-wrap {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-kura);
+    /* Red for icons */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.benefit-card:hover .icon-wrap {
+    transform: scale(1.1);
+}
+
+.icon-wrap svg {
+    width: 100%;
+    height: 100%;
+}
+
+.benefit-card span {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    max-width: 180px;
+    color: var(--accent-kura);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .gallery-col,
+    .conversion-col {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .product-container {
+        padding-top: 60px;
+    }
+
+    .conversion-col {
+        padding: 40px 20px;
+    }
+
+    .gallery-layout {
+        flex-direction: column;
+    }
+
+    .thumbnails-sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .thumbnail-item {
+        flex: 0 0 60px;
+        height: 60px;
+    }
+
+    .size-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-section {
+        flex-direction: column;
+    }
+
+    .benefit-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--accent-kura);
+    }
+
+    /* KURA Standard Mobile */
+    .kura-standard {
+        padding: 30px 20px;
+        min-height: auto;
+        /* Allow content to grow on mobile */
+    }
+
+    .title-with-accents {
+        font-size: 28px;
+        gap: 10px;
+    }
+
+    .accent-line {
+        width: 20px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .benefit-card span {
+        font-size: 13px;
+    }
+
+    .research-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .research-header h2 {
+        font-size: 32px;
+    }
+
+    .trigger-left {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .accordion-trigger {
+        padding: 15px 0;
+    }
+
+    .study-number {
+        font-size: 24px;
+    }
+
+    .study-title {
+        font-size: 18px;
+    }
+
+    .panel-inner {
+        padding: 0 0 20px 0;
+    }
+}
+
+/* Research & Resources Section */
+.research-resources {
+    background-color: var(--bg-kura);
+    padding: 100px 0;
+    width: 100vw;
+    color: var(--text-black);
+    border-top: none;
+}
+
+.research-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.research-header {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.research-header h2 {
+    color: var(--accent-kura);
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.research-subtitle {
+    font-size: 16px;
+    color: var(--text-black);
+}
+
+.research-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.research-image-col {
+    display: flex;
+    justify-content: flex-end;
+    /* Align image towards the center divider */
+}
+
+.research-image-wrapper {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--bg-kura);
+}
+
+.research-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.research-image-wrapper:hover .research-img {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.studies-accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--accent-kura);
+}
+
+.accordion-item:first-child {
+    border-top: 1px solid var(--accent-kura);
+}
+
+.accordion-trigger {
+    width: 100%;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.trigger-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.study-number {
+    font-size: 36px;
+    color: var(--accent-kura);
+    min-width: 50px;
+}
+
+.study-title {
+    font-size: 20px;
+    color: var(--text-black);
+    transition: color 0.3s ease;
+}
+
+.accordion-trigger:hover .study-title {
+    color: var(--accent-kura);
+}
+
+.accordion-icon {
+    font-size: 32px;
+    color: var(--accent-kura);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.panel-inner {
+    padding: 0 0 40px 80px;
+}
+
+.panel-inner p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: var(--text-black);
+    opacity: 0.9;
+}
+
+.reference-link {
+    color: var(--accent-kura);
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.research-footer {
+    text-align: right;
+    margin-top: 80px;
+}
+
+.download-report-btn {
+    display: inline-block;
+    padding: 18px 50px;
+    border: 2px solid var(--accent-kura);
+    color: var(--accent-kura);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.download-report-btn:hover {
+    background-color: var(--accent-kura);
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .research-content-grid {
+        gap: 40px;
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+@media (max-width: 850px) {
+    .research-content-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .research-header {
+        text-align: center;
+    }
+
+    .research-image-col {
+        justify-content: center;
+    }
+
+    .research-footer {
+        text-align: center;
+    }
+
+    .panel-inner {
+        padding-left: 0;
+    }
+
+    .trigger-left {
+        gap: 20px;
+    }
+
+    .study-number {
+        font-size: 28px;
+        min-width: 35px;
+    }
+
+    .study-title {
+        font-size: 18px;
+    }
+}

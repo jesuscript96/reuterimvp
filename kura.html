@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KURA | CUETE AÑEJADO</title>
+    <link rel="stylesheet" href="kura.css">
+</head>
+
+<body>
+    <a href="index.html" class="back-link birdie-font">← back to lab</a>
+    <div class="product-container">
+        <!-- Columna Izquierda: Galería -->
+        <section class="gallery-col">
+            <div class="gallery-layout">
+                <div class="thumbnails-sidebar">
+                    <div class="thumbnail-item">
+                        <img src="img/bacteriashare2.webp" alt="Thumb 1"
+                            style="width: 100%; height: 100%; object-fit: contain; opacity: 0.5;">
+                    </div>
+                    <div class="thumbnail-item">
+                        <div style="width: 100%; height: 100%; background: #eee; border: 1px dashed #ccc;"></div>
+                    </div>
+                    <div class="thumbnail-item">
+                        <div style="width: 100%; height: 100%; background: #eee; border: 1px dashed #ccc;"></div>
+                    </div>
+                </div>
+                <div class="main-image-container">
+                    <!-- Placeholder image since generation failed -->
+                    <div
+                        style="width: 300px; height: 500px; background: rgba(255,255,255,0.2); border: 2px dashed var(--accent-kura); display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+                        <span class="birdie-font" style="font-size: 24px; color: var(--accent-kura);">IMAGEN DE PRODUCTO
+                            <br> KURA: CUETE AÑEJADO</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Panel de Conversión -->
+        <section class="conversion-col">
+            <nav class="breadcrumbs">Inicio / Tienda / Carnes Añejadas</nav>
+
+            <header class="product-header">
+                <h1 class="birdie-font">KURA: CUETE AÑEJADO</h1>
+                <p class="birdie-font lab-subtitle">Laboratorio Esperanza</p>
+            </header>
+
+            <div class="social-proof">
+                <div class="stars">★★★★★</div>
+                <span class="review-count">352 REVIEWS</span>
+            </div>
+
+            <p class="description">
+                Carne de libre pastoreo, curada sin calor (5+ días). Sin azúcar, Keto-friendly y 100% natural.
+            </p>
+
+            <div class="ingredients-wrap birdie-font">
+                <p class="ingredients-title">INGREDIENTES</p>
+                <ul class="ingredients-bullets">
+                    <li>CUETE</li>
+                    <li>SAL</li>
+                    <li>VINAGRE DE MANZANA</li>
+                    <li>SEMILLAS DE CILANTRO</li>
+                    <li>PIMIENTA NEGRA</li>
+                </ul>
+            </div>
+
+            <div class="variants-selection">
+                <h3 class="birdie-font selector-title">SELECCIONA TAMAÑO</h3>
+                <div class="size-grid birdie-font">
+                    <button class="size-btn active" data-price="170" data-label="50G">50G - $170 MXN</button>
+                    <button class="size-btn" data-price="329" data-label="100G">100G - $329 MXN</button>
+                    <button class="size-btn" data-price="780" data-label="250G">250G - $780 MXN</button>
+                    <button class="size-btn" data-price="2500" data-label="1KG">1KG - $2500 MXN</button>
+                </div>
+            </div>
+
+            <div class="subscription-selector">
+                <label class="radio-group birdie-font">
+                    <input type="radio" name="purchase-type" value="once" checked>
+                    Compra única
+                </label>
+                <label class="radio-group birdie-font">
+                    <input type="radio" name="purchase-type" value="subscribe">
+                    Suscripción KURA (Ahorra 10% + Envío Gratis)
+                </label>
+            </div>
+
+            <div class="purchase-actions">
+                <div class="purchase-row">
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" id="minus">-</button>
+                        <input type="text" class="quantity-input" value="1" id="qty" readonly>
+                        <button class="quantity-btn" id="plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn birdie-font" id="add-to-cart">
+                        AGREGAR AL CARRITO - $170 MXN
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección Inferior: Beneficios -->
+            <section class="benefits-section birdie-font">
+                <div class="benefit-item">
+                    <span class="benefit-text">50G DE PROTEÍNA POR 100G</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-text">ZERO AZÚCAR / KETO</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-text">100 CALORÍAS</span>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <!-- Section: The Process - Accordion Layout -->
+    <section class="research-resources" id="kura-process-merged">
+        <div class="research-container">
+            <header class="research-header">
+                <h2 class="birdie-font">EL PROCESO KURA</h2>
+                <p class="research-subtitle">Artesanía, tiempo y rigor microbiológico en cada etapa.</p>
+            </header>
+
+            <div class="research-content-grid">
+                <!-- Column 1: Image -->
+                <div class="research-image-col">
+                    <div class="research-image-wrapper">
+                        <img src="img/anejando.png" alt="KURA Process" class="research-img">
+                    </div>
+                </div>
+
+                <!-- Column 2: Accordion (Steps) -->
+                <div class="studies-accordion">
+                    <!-- Step 01 -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="trigger-left">
+                                <span class="study-number birdie-font">01</span>
+                                <span class="study-title birdie-font">5+ DIAS SECADO</span>
+                            </div>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="panel-inner">
+                                <p>Un tiempo de maduración prolongado para lograr la textura y sabor óptimos de forma
+                                    natural.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="trigger-left">
+                                <span class="study-number birdie-font">02</span>
+                                <span class="study-title birdie-font">CURADAS SIN CALOR</span>
+                            </div>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="panel-inner">
+                                <p>Proceso de curación artesanal sin exposición a altas temperaturas para preservar
+                                    nutrientes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="trigger-left">
+                                <span class="study-number birdie-font">03</span>
+                                <span class="study-title birdie-font">AMBIENTE CON AIRE FILTRADO</span>
+                            </div>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="panel-inner">
+                                <p>Garantizamos la máxima higiene y pureza en nuestro taller con sistemas de aire
+                                    filtrado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: The KURA Standard -->
+    <section class="kura-standard">
+        <header class="standard-header">
+            <h2 class="birdie-font title-with-accents">
+                <span class="accent-line left"></span>
+                SNACKING HECHO BIEN
+                <span class="accent-line right"></span>
+            </h2>
+        </header>
+
+        <div class="benefits-grid">
+            <!-- Icono Vaca: 100% LIBRE PASTOREO -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/Librepastoreo.png" alt="Libre Pastoreo"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">100% LIBRE PASTOREO</span>
+            </div>
+
+            <!-- Icono Brazo Musculoso: 50G DE PROTEÍNA -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/50gproteina.png" alt="50g Proteína"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">50G DE PROTEÍNA (POR 100G)</span>
+            </div>
+
+            <!-- Icono Azúcar Tachada: ZERO AZÚCAR AÑADIDA -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/Noazucares.png" alt="Zero Azúcar"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">ZERO AZÚCAR AÑADIDA</span>
+            </div>
+
+            <!-- Icono Pan/Trigo Tachado: 100% KETO FRIENDLY -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/ketofriendly.png" alt="Keto Friendly"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">100% KETO FRIENDLY</span>
+            </div>
+
+            <!-- Icono Matraz/Químico Tachado: SIN CONSERVADORES -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/sinpreservantes.png" alt="Sin Conservadores"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">SIN CONSERVADORES ARTIFICIALES</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        const sizeBtns = document.querySelectorAll('.size-btn');
+        const qtyInput = document.getElementById('qty');
+        const plusBtn = document.getElementById('plus');
+        const minusBtn = document.getElementById('minus');
+        const addToCartBtn = document.getElementById('add-to-cart');
+        const purchaseType = document.getElementsByName('purchase-type');
+
+        let currentPrice = 170;
+        let currentQty = 1;
+        let isSubscription = false;
+
+        function updateDisplay() {
+            let finalPrice = currentPrice * currentQty;
+            if (isSubscription) {
+                finalPrice = finalPrice * 0.9;
+            }
+            addToCartBtn.innerText = `AGREGAR AL CARRITO - $${Math.round(finalPrice)} MXN`;
+        }
+
+        sizeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sizeBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentPrice = parseInt(btn.dataset.price);
+                updateDisplay();
+            });
+        });
+
+        plusBtn.addEventListener('click', () => {
+            currentQty++;
+            qtyInput.value = currentQty;
+            updateDisplay();
+        });
+
+        minusBtn.addEventListener('click', () => {
+            if (currentQty > 1) {
+                currentQty--;
+                qtyInput.value = currentQty;
+                updateDisplay();
+            }
+        });
+
+        purchaseType.forEach(radio => {
+            radio.addEventListener('change', () => {
+                isSubscription = (radio.value === 'subscribe');
+                updateDisplay();
+            });
+        });
+
+        // Accordion Logic
+        const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+
+        accordionTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentNode;
+                const panel = trigger.nextElementSibling;
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-panel').style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current item
+                if (isActive) {
+                    item.classList.remove('active');
+                    panel.style.maxHeight = null;
+                } else {
+                    item.classList.add('active');
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+
+        updateDisplay();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Birdie';
+    src: url('BirdieTypo/TAYBirdieRegular.woff2') format('woff2'),
+        url('BirdieTypo/TAYBirdieRegular.woff') format('woff'),
+        url('BirdieTypo/TAYBirdieRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #073a01;
+    color: #fe5f0f;
+    font-family: 'Birdie', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+}
+
+.header {
+    text-align: center;
+}
+
+.main-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    letter-spacing: 0.3em;
+}
+
+.verticals-container {
+    width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: 2rem;
+}
+
+.vertical-item {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.vertical-item:hover {
+    transform: scale(1.05);
+}
+
+.vertical-item.disabled {
+    cursor: default;
+}
+
+.vertical-item.disabled:hover {
+    transform: none;
+}
+
+.vertical-title {
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    line-height: 0.8;
+    margin-bottom: 1rem;
+}
+
+.vertical-subtitle {
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.vertical-status {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+        padding: 2rem 1rem;
+    }
+
+    .verticals-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        margin: 4rem 0;
+    }
+}

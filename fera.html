@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERA | YOGUR DE COCO</title>
+    <link rel="stylesheet" href="fera.css">
+    <link rel="icon" type="image/webp" href="img/bacteriashare2.webp">
+</head>
+
+<body>
+    <a href="index.html" class="back-link birdie-font">← back to lab</a>
+    <div class="product-container">
+        <!-- Columna Izquierda: Galería -->
+        <section class="gallery-col">
+            <div class="gallery-layout">
+                <div class="thumbnails-sidebar">
+                    <div class="thumbnail-item">
+                        <img src="img/pequeño.png" alt="Thumb 1"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="img/boteyogur.png" alt="Thumb 2"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="img/yogurfondomarron.png" alt="Thumb 3"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="main-image-container">
+                    <img src="img/Nofondoyogur.png" alt="FERA Yogurt" class="main-product-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Panel de Conversión -->
+        <section class="conversion-col">
+            <nav class="breadcrumbs">Inicio / Tienda / Cultivos Fermentados</nav>
+
+            <header class="product-header">
+                <h1 class="birdie-font">FERA: YOGUR DE COCO</h1>
+                <p class="birdie-font lab-subtitle">Laboratorio Esperanza</p>
+            </header>
+
+            <div class="social-proof">
+                <div class="stars">★★★★★</div>
+                <span class="review-count">128 REVIEWS</span>
+            </div>
+
+            <p class="description">
+                Yogur de coco artesanal, fermentado por 48 horas con L. Reuteri. Probiótico vivo, sin lácteos y 100%
+                natural.
+            </p>
+
+            <div class="ingredients-wrap birdie-font">
+                <p class="ingredients-title">INGREDIENTES</p>
+                <ul class="ingredients-bullets">
+                    <li>COCO</li>
+                    <li>AGUA</li>
+                    <li>INULINA (PREBIÓTICO)</li>
+                    <li>CULTIVO VIVO L. REUTERI</li>
+                    <li>TAPIOCA</li>
+                </ul>
+            </div>
+
+            <div class="variants-selection">
+                <h3 class="birdie-font selector-title">SELECCIONA TAMAÑO</h3>
+                <div class="size-grid birdie-font">
+                    <button class="size-btn active" data-price="220" data-label="250ML">250ML - $220 MXN</button>
+                    <button class="size-btn" data-price="700" data-label="1L">1L - $700 MXN</button>
+                </div>
+            </div>
+
+            <div class="subscription-selector">
+                <label class="radio-group birdie-font">
+                    <input type="radio" name="purchase-type" value="once" checked>
+                    Compra única
+                </label>
+                <label class="radio-group birdie-font">
+                    <input type="radio" name="purchase-type" value="subscribe">
+                    Suscripción FERA (Ahorra 10% + Envío Gratis)
+                </label>
+            </div>
+
+            <div class="purchase-actions">
+                <div class="purchase-row">
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" id="minus">-</button>
+                        <input type="text" class="quantity-input" value="1" id="qty" readonly>
+                        <button class="quantity-btn" id="plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn birdie-font" id="add-to-cart">
+                        AGREGAR AL CARRITO - $220 MXN
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sección Inferior: Beneficios -->
+            <section class="benefits-section birdie-font">
+                <div class="benefit-item">
+                    <span class="benefit-text">PROBIÓTICO VIVO</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-text">SIN LÁCTEOS / VEGAN</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-text">48H FERMENTACIÓN</span>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <!-- Section: The Process - Accordion Layout -->
+    <section class="research-resources" id="fera-process">
+        <div class="research-container">
+            <header class="research-header">
+                <h2 class="birdie-font">EL PROCESO FERA</h2>
+                <p class="research-subtitle">Ciencia y paciencia para un alimento vivo.</p>
+            </header>
+
+            <div class="research-content-grid">
+                <!-- Column 1: Image -->
+                <div class="research-image-col">
+                    <div class="research-image-wrapper">
+                        <img src="img/bañomaria.png" alt="FERA Process" class="research-img">
+                    </div>
+                </div>
+
+                <!-- Column 2: Accordion (Steps) -->
+                <div class="studies-accordion">
+                    <!-- Step 01 -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="trigger-left">
+                                <span class="study-number birdie-font">01</span>
+                                <span class="study-title birdie-font">48 HORAS FERMENTACIÓN</span>
+                            </div>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="panel-inner">
+                                <p>Un proceso lento y controlado que permite que las bacterias L. Reuteri se
+                                    multipliquen exponencialmente, logrando una densidad probiótica superior.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="trigger-left">
+                                <span class="study-number birdie-font">02</span>
+                                <span class="study-title birdie-font">TEMPERATURA CONTROLADA</span>
+                            </div>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="panel-inner">
+                                <p>Mantenemos una temperatura constante de 37°C (humana) para optimizar el crecimiento
+                                    de los cultivos vivos sin dañarlos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <div class="trigger-left">
+                                <span class="study-number birdie-font">03</span>
+                                <span class="study-title birdie-font">PRUEBAS DE CALIDAD</span>
+                            </div>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-panel">
+                            <div class="panel-inner">
+                                <p>Cada lote es revisado para asegurar la textura, pH y vitalidad microbiológica antes
+                                    de ser envasado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: The FERA Standard -->
+    <section class="kura-standard">
+        <header class="standard-header">
+            <h2 class="birdie-font title-with-accents">
+                <span class="accent-line left"></span>
+                EL ESTÁNDAR FERA
+                <span class="accent-line right"></span>
+            </h2>
+        </header>
+
+        <div class="benefits-grid">
+            <!-- Icono: PLANT BASED -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/sinpreservantes.png" alt="Plant Based"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">100% PLANT BASED</span>
+            </div>
+
+            <!-- Icono: PROBIOTIC POWER -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/50gproteina.png" alt="Probiotic"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">PODER PROBIÓTICO (L. REUTERI)</span>
+            </div>
+
+            <!-- Icono: ZERO AZÚCAR -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/Noazucares.png" alt="Zero Azúcar"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">ZERO AZÚCAR AÑADIDA</span>
+            </div>
+
+            <!-- Icono: KETO FRIENDLY -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/ketofriendly.png" alt="Keto Friendly"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">100% KETO FRIENDLY</span>
+            </div>
+
+            <!-- Icono: SIN CONSERVADORES -->
+            <div class="benefit-card">
+                <div class="icon-wrap">
+                    <img src="img/sinpreservantes.png" alt="Sin Conservadores"
+                        style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span class="birdie-font">SIN CONSERVADORES ARTIFICIALES</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const sizeBtns = document.querySelectorAll('.size-btn');
+        const qtyInput = document.getElementById('qty');
+        const plusBtn = document.getElementById('plus');
+        const minusBtn = document.getElementById('minus');
+        const addToCartBtn = document.getElementById('add-to-cart');
+        const purchaseType = document.getElementsByName('purchase-type');
+
+        let currentPrice = 220;
+        let currentQty = 1;
+        let isSubscription = false;
+
+        function updateDisplay() {
+            let finalPrice = currentPrice * currentQty;
+            if (isSubscription) {
+                finalPrice = finalPrice * 0.9;
+            }
+            addToCartBtn.innerText = `AGREGAR AL CARRITO - $${Math.round(finalPrice)} MXN`;
+        }
+
+        sizeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sizeBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentPrice = parseInt(btn.dataset.price);
+                updateDisplay();
+            });
+        });
+
+        plusBtn.addEventListener('click', () => {
+            currentQty++;
+            qtyInput.value = currentQty;
+            updateDisplay();
+        });
+
+        minusBtn.addEventListener('click', () => {
+            if (currentQty > 1) {
+                currentQty--;
+                qtyInput.value = currentQty;
+                updateDisplay();
+            }
+        });
+
+        purchaseType.forEach(radio => {
+            radio.addEventListener('change', () => {
+                isSubscription = (radio.value === 'subscribe');
+                updateDisplay();
+            });
+        });
+
+        // Accordion Logic
+        const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+
+        accordionTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentNode;
+                const panel = trigger.nextElementSibling;
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-panel').style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current item
+                if (isActive) {
+                    item.classList.remove('active');
+                    panel.style.maxHeight = null;
+                } else {
+                    item.classList.add('active');
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+
+        updateDisplay();
+    </script>
+</body>
+
+</html>
