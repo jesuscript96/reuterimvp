@@ -90,8 +90,8 @@ body {
 }
 
 .investigation-banner {
-    background: #ffffff;
-    color: var(--text-black);
+    /* background: #ffffff; */
+    color: var(--accent-fera);
     padding: 15px 40px;
     font-size: 24px;
     border-radius: 50px;
