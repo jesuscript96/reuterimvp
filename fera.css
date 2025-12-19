@@ -8,10 +8,10 @@
 }
 
 :root {
-    --bg-fera: #6ebe43;
-    --accent-fera: #ffffff;
+    --bg-fera: #CEDF9F;
+    --accent-fera: #2d5016;
     --text-black: #000000;
-    --text-white: #ffffff;
+    --text-white: #073a01;
 }
 
 * {
@@ -90,7 +90,7 @@ body {
 }
 
 .investigation-banner {
-    background: var(--accent-fera);
+    background: #ffffff;
     color: var(--text-black);
     padding: 15px 40px;
     font-size: 24px;

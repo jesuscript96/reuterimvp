@@ -19,8 +19,8 @@ img {
 }
 
 body {
-    background-color: #162b18;
-    color: #a6ce43;
+    background-color: #CEDF9F;
+    color: #000000;
     font-family: 'Birdie', sans-serif;
     width: 100vw;
     height: 100vh;
@@ -33,7 +33,7 @@ body {
     top: 20px;
     left: 20px;
     text-decoration: none;
-    color: #a6ce43;
+    color: #000000;
     font-family: 'Birdie', sans-serif;
     font-size: 1.2rem;
     z-index: 100;
