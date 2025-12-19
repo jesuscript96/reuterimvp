@@ -54,10 +54,9 @@
             </div>
 
             <div class="variants-selection">
-                <h3 class="birdie-font selector-title" data-i18n="select-size">SELECCIONA TAMAÑO</h3>
-                <div class="size-grid birdie-font">
-                    <button class="size-btn active" data-price="220" data-label="250ML">250ML - $220 MXN</button>
-                    <button class="size-btn" data-price="700" data-label="1L">1L - $700 MXN</button>
+                <h3 class="birdie-font selector-title" data-i18n="select-size">TAMAÑO</h3>
+                <div class="size-info-block birdie-font" data-i18n="fera-size-info">
+                    1 LITRO - $700 MXN
                 </div>
             </div>
 
@@ -71,7 +70,7 @@
                         <button class="quantity-btn" id="plus">+</button>
                     </div>
                     <button class="add-to-cart-btn birdie-font" id="add-to-cart">
-                        AGREGAR AL CARRITO - $220 MXN
+                        AGREGAR AL CARRITO - $700 MXN
                     </button>
                 </div>
             </div>
@@ -183,7 +182,7 @@
         const minusBtn = document.getElementById('minus');
         const addToCartBtn = document.getElementById('add-to-cart');
 
-        let currentPrice = 220;
+        let currentPrice = 700;
         let currentQty = 1;
 
         function updateDisplay() {
@@ -192,15 +191,6 @@
             const currency = t('mxn');
             addToCartBtn.innerText = `${label} - $${Math.round(finalPrice)} ${currency}`;
         }
-
-        sizeBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                sizeBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentPrice = parseInt(btn.dataset.price);
-                updateDisplay();
-            });
-        });
 
         plusBtn.addEventListener('click', () => {
             currentQty++;

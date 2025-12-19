@@ -203,6 +203,18 @@ body {
     border-color: var(--accent-fera);
 }
 
+.size-info-block {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent-fera);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: var(--text-white);
+    font-size: 1.1rem;
+    width: fit-content;
+    margin-bottom: 25px;
+    letter-spacing: 0.05em;
+}
+
 
 
 /* Purchase Actions */
